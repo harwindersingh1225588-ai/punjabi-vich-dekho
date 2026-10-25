@@ -39,6 +39,7 @@
       padding: 0 16px;
     }
 
+    /* Header */
     header {
       background-color: var(--bg-dark);
       border-bottom: 1px solid var(--border);
@@ -113,6 +114,7 @@
       color: #ffffff;
     }
 
+    /* Level Selector Panel */
     .panel {
       background-color: rgba(15, 23, 42, 0.75);
       border: 1px solid var(--border);
@@ -212,6 +214,7 @@
       margin-top: 2px;
     }
 
+    /* Main Tabs */
     .tabs-bar {
       display: flex;
       flex-wrap: wrap;
@@ -238,6 +241,7 @@
       border-color: transparent;
     }
 
+    /* Search & Filter Bar */
     .search-row {
       display: flex;
       flex-wrap: wrap;
@@ -257,6 +261,7 @@
       font-size: 14px;
     }
 
+    /* Cards Grid */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -389,6 +394,7 @@
       background: #475569;
     }
 
+    /* Grammar & Numbers */
     .grammar-box {
       background: var(--bg-panel);
       border: 1px solid var(--border);
@@ -436,6 +442,7 @@
       background: #334155;
     }
 
+    /* Quiz Styling */
     .quiz-card {
       max-width: 640px;
       margin: 0 auto;
@@ -484,6 +491,7 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container header-inner">
       <div class="brand">
@@ -504,6 +512,7 @@
 
   <main class="container">
 
+    <!-- Level Selector Panel -->
     <section class="panel">
       <div class="panel-top">
         <div>
@@ -557,6 +566,7 @@
       </div>
     </section>
 
+    <!-- Navigation Tabs -->
     <div class="tabs-bar">
       <button type="button" onclick="switchTab('words')" id="tab-words" class="tab-btn active-tab">📖 ਸ਼ਬਦ (Vocabulary)</button>
       <button type="button" onclick="switchTab('sentences')" id="tab-sentences" class="tab-btn">💬 ਵਾਕ (Sentences)</button>
@@ -564,6 +574,7 @@
       <button type="button" onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn">🎯 ਟੈਸਟ / Quiz (A1-C2)</button>
     </div>
 
+    <!-- Search & Filter Bar -->
     <div id="search-container" class="search-row">
       <input
         type="text"
@@ -581,6 +592,7 @@
       </select>
     </div>
 
+    <!-- Main Dynamic Area -->
     <div id="content-area"></div>
 
   </main>
@@ -600,6 +612,7 @@
       { id: 11, type: 'sentence', level: 'A1', cat: 'Greetings', hr: 'Ja sam iz Indije, iz Punjaba.', pron: 'ਯਾ ਸਾਮ ਇਜ਼ ਇੰਦੀਏ, ਇਜ਼ ਪੰਜਾਬਾ', pa: 'ਮੈਂ ਭਾਰਤ (ਪੰਜਾਬ) ਤੋਂ ਹਾਂ।', ro: 'Main Bharat (Punjab) ton haan.' },
       { id: 12, type: 'sentence', level: 'A1', cat: 'Greetings', hr: 'Kako se zoveš? Ja se zovem...', pron: 'ਕਾਕੋ ਸੇ ਜ਼ੋਵੇਸ਼? ਯਾ ਸੇ ਜ਼ੋਵੇਮ...', pa: 'ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ? ਮੇਰਾ ਨਾਮ ... ਹੈ।', ro: 'Tuhada naam ki hai? Mera naam ... hai.' },
       { id: 13, type: 'sentence', level: 'A1', cat: 'Greetings', hr: 'Govorite li engleski?', pron: 'ਗੋਵੋਰੀਤੇ ਲੀ ਏਂਗਲੇਸਕੀ?', pa: 'ਕੀ ਤੁਸੀਂ ਅੰਗਰੇਜ਼ੀ ਬੋਲਦੇ ਹੋ?', ro: 'Ki tusi English bolde ho?' },
+
       { id: 14, type: 'word', level: 'A2', cat: 'Daily', hr: 'Trgovina / Pekara', pron: 'ਤਰਗੋਵੀਨਾ / ਪੇਕਾਰਾ (Trgovina / Pekara)', pa: 'ਦੁਕਾਨ / ਬੇਕਰੀ', ro: 'Dukaan / Bakery' },
       { id: 15, type: 'word', level: 'A2', cat: 'Daily', hr: 'Kolodvor / Autobus', pron: 'ਕੋਲੋਦਵੋਰ / ਆਉਤੋਬੁਸ (Kolodvor / Autobus)', pa: 'ਸਟੇਸ਼ਨ / ਬੱਸ', ro: 'Station / Bus' },
       { id: 16, type: 'word', level: 'A2', cat: 'Daily', hr: 'Stanarina / Račun', pron: 'ਸਤਾਨਾਰੀਨਾ / ਰਾਚੂਨ (Stanarina / Rachun)', pa: 'ਕਮਰੇ ਦਾ ਕਿਰਾਇਆ / ਬਿੱਲ', ro: 'Kamre da kiraya / Bill' },
@@ -608,6 +621,7 @@
       { id: 19, type: 'sentence', level: 'A2', cat: 'Daily', hr: 'Koliko ovo košta?', pron: 'ਕੋਲੀਕੋ ਓਵੋ ਕੋਸ਼ਤਾ?', pa: 'ਇਸ ਦੀ ਕੀਮਤ ਕਿੰਨੀ ਹੈ?', ro: 'Is di keemat kinni hai?' },
       { id: 20, type: 'sentence', level: 'A2', cat: 'Daily', hr: 'Gdje je najbliža trgovina ili bankomat?', pron: 'ਗਦੀਏ ਯੇ ਨਾਇਬਲੀਝਾ ਤਰਗੋਵੀਨਾ ਇਲੀ ਬਾਂਕੋਮਾਤ?', pa: 'ਸਭ ਤੋਂ ਨੇੜੇ ਦੁਕਾਨ ਜਾਂ ATM ਕਿੱਥੇ ਹੈ?', ro: 'Sabh ton nede dukaan jaan ATM kitthe hai?' },
       { id: 21, type: 'sentence', level: 'A2', cat: 'Daily', hr: 'Trebam kupiti mjesečnu kartu za autobus.', pron: 'ਤਰੇਬਾਮ ਕੁਪੀਤੀ ਮੀਏਸੇਚਨੂ ਕਾਰਤੂ ਜ਼ਾ ਆਉਤੋਬੁਸ', pa: 'ਮੈਂ ਬੱਸ ਦਾ ਮਹੀਨਾਵਾਰ ਪਾਸ ਖਰੀਦਣਾ ਹੈ।', ro: 'Main bus da mahinavaar pass kharidna hai.' },
+
       { id: 22, type: 'word', level: 'B1', cat: 'Work', hr: 'Zavarivač / Zavarivanje', pron: 'ਜ਼ਾਵਾਰੀਵਾਚ / ਜ਼ਾਵਾਰੀਵਾਨੀਏ (Zavarivach / Zavarivanye)', pa: 'ਵੈਲਡਰ / ਵੈਲਡਿੰਗ ਦਾ ਕੰਮ', ro: 'Welder / Welding da kamm' },
       { id: 23, type: 'word', level: 'B1', cat: 'Work', hr: 'Aparat za zavarivanje (MIG / MAG)', pron: 'ਅਪਾਰਾਤ ਜ਼ਾ ਜ਼ਾਵਾਰੀਵਾਨੀਏ', pa: 'ਵੈਲਡਿੰਗ ਮਸ਼ੀਨ (MIG / MAG)', ro: 'Welding Machine' },
       { id: 24, type: 'word', level: 'B1', cat: 'Work', hr: 'Žica s praškom (Flux-core)', pron: 'ਝੀਤਸਾ ਸ ਪਰਾਸ਼ਕੋਮ (Zhitsa s prashkom)', pa: 'ਫਲਕਸ-ਕੋਰ ਵਾਇਰ (ਤਾਰ)', ro: 'Flux-core wire (Taar)' },
@@ -618,6 +632,7 @@
       { id: 29, type: 'sentence', level: 'B1', cat: 'Work', hr: 'Imam iskustva u MIG i Flux-core zavarivanju.', pron: 'ਇਮਾਮ ਇਸਕੁਸਤਵਾ ਉ ਮਿਗ ਇ ਫਲਕਸ-ਕੋਰ ਜ਼ਾਵਾਰੀਵਾਨੀਉ', pa: 'ਮੈਨੂੰ MIG ਅਤੇ Flux-core ਵੈਲਡਿੰਗ ਦਾ ਤਜਰਬਾ ਹੈ।', ro: 'Mainu MIG ate Flux-core welding da tajarba hai.' },
       { id: 30, type: 'sentence', level: 'B1', cat: 'Work', hr: 'Trebam novu bocu plina i kolut žice.', pron: 'ਤਰੇਬਾਮ ਨੋਵੂ ਬੋਤਸੂ ਪਲੀਨਾ ਇ ਕੋਲੁਤ ਝੀਤਸੇ', pa: 'ਮੈਨੂੰ ਨਵਾਂ ਗੈਸ ਸਿਲੰਡਰ ਅਤੇ ਵਾਇਰ ਰੋਲ ਚਾਹੀਦਾ ਹੈ।', ro: 'Mainu nava gas cylinder ate wire roll chahida hai.' },
       { id: 31, type: 'sentence', level: 'B1', cat: 'Work', hr: 'Znam čitati tehničke nacrte i raditi po mjerama.', pron: 'ਜ਼ਨਾਮ ਚੀਤਾਤੀ ਤੇਹਨੀਚਕੇ ਨਾਤਸਰਤੇ ਇ ਰਾਦੀਤੀ ਪੋ ਮੀਏਰਾਮਾ', pa: 'ਮੈਂ ਟੈਕਨੀਕਲ ਡਰਾਇੰਗ ਪੜ੍ਹ ਸਕਦਾ ਹਾਂ ਅਤੇ ਨਾਪ ਅਨੁਸਾਰ ਕੰਮ ਕਰਦਾ ਹਾਂ।', ro: 'Main technical drawing padh sakda haan ate naap anusaar kamm karda haan.' },
+
       { id: 32, type: 'word', level: 'B2', cat: 'Work', hr: 'Radna dozvola i boravište', pron: 'ਰਾਦਨਾ ਦੋਜ਼ਵੋਲਾ ਇ ਬੋਰਾਵੀਸ਼ਤੇ', pa: 'ਵਰਕ ਪਰਮਿਟ ਅਤੇ ਰਹਿਣ ਦਾ ਕਾਰਡ (TRC)', ro: 'Work permit ate residence card' },
       { id: 33, type: 'word', level: 'B2', cat: 'Work', hr: 'Ugovor o radu / Prekovremeni rad', pron: 'ਉਗੋਵੋਰ ਓ ਰਾਦੂ / ਪਰੇਕੋਵਰੇਮੇਨੀ ਰਾਦ', pa: 'ਕੰਮ ਦਾ ਐਗਰੀਮੈਂਟ (Contract) / ਓਵਰਟਾਈਮ', ro: 'Work contract / Overtime' },
       { id: 34, type: 'word', level: 'B2', cat: 'Work', hr: 'Plaća (Bruto / Neto) / Porez', pron: 'ਪਲਾਚਾ (ਬਰੂਤੋ / ਨੇਤੋ) / ਪੋਰੇਜ਼', pa: 'ਤਨਖਾਹ (ਕੁੱਲ / ਹੱਥ ਵਿੱਚ) / ਟੈਕਸ', ro: 'Tankhah (Gross / Net) / Tax' },
@@ -625,14 +640,16 @@
       { id: 36, type: 'sentence', level: 'B2', cat: 'Work', hr: 'Kada će biti isplata plaće za prošli mjesec?', pron: 'ਕਾਦਾ ਚੇ ਬੀਤੀ ਇਸਪਲਾਤਾ ਪਲਾਚੇ ਜ਼ਾ ਪਰੋਸ਼ਲੀ ਮੀਏਸੇਤਸ?', pa: 'ਪਿਛਲੇ ਮਹੀਨੇ ਦੀ ਤਨਖਾਹ ਕਦੋਂ ਮਿਲੇਗੀ?', ro: 'Pichhle mahine di tankhah kadon milegi?' },
       { id: 37, type: 'sentence', level: 'B2', cat: 'Health', hr: 'Moram otići u policiju (MUP) produžiti radnu dozvolu.', pron: 'ਮੋਰਾਮ ਓਤੀਚੀ ਉ ਪੋਲੀਤਸੀਯੂ ਪਰੋਦੂਝੀਤੀ ਰਾਦਨੂ ਦੋਜ਼ਵੋਲੂ', pa: 'ਮੈਂ ਆਪਣਾ ਵਰਕ ਪਰਮਿਟ ਵਧਾਉਣ ਲਈ ਪੁਲਿਸ ਸਟੇਸ਼ਨ (MUP) ਜਾਣਾ ਹੈ।', ro: 'Main apna work permit vadhaun layi police station (MUP) jaana hai.' },
       { id: 38, type: 'sentence', level: 'B2', cat: 'Work', hr: 'Ovaj stroj je u kvaru, treba pozvati održavanje.', pron: 'ਓਵਾਇ ਸਤਰੋਇ ਯੇ ਉ ਕਵਾਰੂ, ਤਰੇਬਾ ਪੋਜ਼ਵਾਤੀ ਓਦਰਝਾਵਾਨੀਏ', pa: 'ਇਹ ਮਸ਼ੀਨ ਖਰਾਬ ਹੈ, ਮੇਂਟੇਨੈਂਸ ਟੀਮ ਨੂੰ ਬੁਲਾਉਣਾ ਪਵੇਗਾ।', ro: 'Eh machine kharab hai, maintenance team nu bulauna pavega.' },
+
       { id: 39, type: 'word', level: 'C1', cat: 'Advanced', hr: 'Odgovornost / Učinkovitost / Kvaliteta', pron: 'ਓਦਗੋਵੋਰਨੋਸਤ / ਉਚੀਨਕੋਵੀਤੋਸਤ / ਕਵਾਲੀਤੇਤਾ', pa: 'ਜ਼ਿੰਮੇਵਾਰੀ / ਕੰਮ ਦੀ ਸਮਰੱਥਾ / ਕੁਆਲਿਟੀ', ro: 'Zimmevari / Efficiency / Quality' },
       { id: 40, type: 'word', level: 'C1', cat: 'Advanced', hr: 'Certifikat / Atest za zavarivača', pron: 'ਤਸੇਰਤੀਫੀਕਾਤ / ਆਤੇਸਤ ਜ਼ਾ ਜ਼ਾਵਾਰੀਵਾਚਾ', pa: 'ਵੈਲਡਰ ਦਾ ਸਰਟੀਫਿਕੇਟ / ਟੈਸਟ ਪਾਸ ਲਾਇਸੈਂਸ', ro: 'Welder certificate / Official license test' },
       { id: 41, type: 'word', level: 'C1', cat: 'Advanced', hr: 'Sporazum / Rješavanje problema', pron: 'ਸਪੋਰਾਜ਼ੂਮ / ਰੀਏਸ਼ਾਵਾਨੀਏ ਪਰੋਬਲੇਮਾ', pa: 'ਸਮਝੌਤਾ / ਸਮੱਸਿਆ ਦਾ ਹੱਲ', ro: 'Samjhauta / Problem solving' },
       { id: 42, type: 'sentence', level: 'C1', cat: 'Advanced', hr: 'S obzirom na moje iskustvo i kvalitetu rada, želio bih razgovarati o povećanju satnice.', pron: 'ਸ ਓਬਜ਼ੀਰੋਮ ਨਾ ਮੋਏ ਇਸਕੁਸਤਵੋ ਇ ਕਵਾਲੀਤੇਤੂ ਰਾਦਾ, ਝੇਲੀਓ ਬਿਹ ਰਾਜ਼ਗੋਵਾਰਾਤੀ ਓ ਪੋਵੇਚਾਨੀਉ ਸਾਤਨੀਤਸੇ', pa: 'ਮੇਰੇ ਤਜਰਬੇ ਅਤੇ ਕੰਮ ਦੀ ਕੁਆਲਿਟੀ ਨੂੰ ਦੇਖਦੇ ਹੋਏ, ਮੈਂ ਆਪਣੇ ਘੰਟੇ ਦੇ ਰੇਟ (ਤਨਖਾਹ) ਵਧਾਉਣ ਬਾਰੇ ਗੱਲ ਕਰਨੀ ਚਾਹੁੰਦਾ ਹਾਂ।', ro: 'Mere tajarbe ate kamm di quality nu dekhde hoye, main apne ghante de rate vadhaun baare gall karni chahunda haan.' },
       { id: 43, type: 'sentence', level: 'C1', cat: 'Advanced', hr: 'Svi zavareni spojevi su pregledani i zadovoljavaju stroge sigurnosne standarde.', pron: 'ਸਵੀ ਜ਼ਾਵਾਰੇਨੀ ਸਪੋਏਵੀ ਸੂ ਪਰੇਗਲੇਦਾਨੀ ਇ ਜ਼ਾਦੋਵੋਲੀਆਵਾਯੂ ਸਤਰੋਗੇ ਸੀਗੁਰਨੋਸਨੇ ਸਤਾਂਦਾਰਦੇ', pa: 'ਸਾਰੇ ਵੈਲਡਿੰਗ ਜੋੜਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਗਈ ਹੈ ਅਤੇ ਉਹ ਸਖ਼ਤ ਸੁਰੱਖਿਆ ਮਿਆਰਾਂ ਤੇ ਖਰੇ ਉਤਰਦੇ ਹਨ।', ro: 'Saare welding jodaan di jaanch kiti gayi hai ate oh sakht safety standards te khare utarde han.' },
+
       { id: 44, type: 'word', level: 'C2', cat: 'Advanced', hr: 'Bez muke nema nauke', pron: 'ਬੇਜ਼ ਮੂਕੇ ਨੇਮਾ ਨਾਉਕੇ (Bez muke nema nauke)', pa: 'ਮਿਹਨਤ ਤੋਂ ਬਿਨਾਂ ਕਾਮਯਾਬੀ ਨਹੀਂ ਮਿਲਦੀ (ਮੁਹਾਵਰਾ)', ro: 'Mehnat ton bina kamyabi nahi mildi (No pain, no gain)' },
-      { id: 45, type: 'word', level: 'C2', cat: 'Advanced', hr: 'Tko rano rani, dvije sreće grabi', pron: 'ਤਕੋ ਰਾਨੋ ਰਾਨੀ, ਦਵੀਏ ਸਰੇਚੇ גראਬੀ', pa: 'ਜੋ ਸਵੇਰੇ ਜਲਦੀ ਉੱਠਦਾ ਹੈ, ਉਹ ਦੁੱਗਣੀ ਕਿਸਮਤ ਪਾਉਂਦਾ ਹੈ', ro: 'Jo savere jaldi uthda hai, oh dugni kismat paunda hai' },
-      { id: 46, type: 'word', level: 'C2', cat: 'Advanced', hr: 'Majstor svog zanata', pron: 'ਮਾਇਸਤੋਰ ਸਵੋਗ ਜ਼ਾਨਾਤਾ (Maystor svog zanata)', pa: 'ਆਪਣੇ ਹੁנਰ ਦਾ ਪੱਕਾ ਉਸਤਾਦ (ਮਾਹਿਰ ਕਾਰੀਗਰ)', ro: 'Apne hunar da pakka ustaad (Master of one\'s craft)' },
+      { id: 45, type: 'word', level: 'C2', cat: 'Advanced', hr: 'Tko rano rani, dvije sreće grabi', pron: 'ਤਕੋ ਰਾਨੋ ਰਾਨੀ, ਦਵੀਏ ਸਰੇਚੇ ਗਰਾਬੀ', pa: 'ਜੋ ਸਵੇਰੇ ਜਲਦੀ ਉੱਠਦਾ ਹੈ, ਉਹ ਦੁੱਗਣੀ ਕਿਸਮਤ ਪਾਉਂਦਾ ਹੈ', ro: 'Jo savere jaldi uthda hai, oh dugni kismat paunda hai' },
+      { id: 46, type: 'word', level: 'C2', cat: 'Advanced', hr: 'Majstor svog zanata', pron: 'ਮਾਇਸਤੋਰ ਸਵੋਗ ਜ਼ਾਨਾਤਾ (Maystor svog zanata)', pa: 'ਆਪਣੇ ਹੁਨਰ ਦਾ ਪੱਕਾ ਉਸਤਾਦ (ਮਾਹਿਰ ਕਾਰੀਗਰ)', ro: 'Apne hunar da pakka ustaad (Master of one\'s craft)' },
       { id: 47, type: 'sentence', level: 'C2', cat: 'Advanced', hr: 'U potpunosti sam se prilagodio radnom okruženju i samostalno vodim najsloženije projekte u pogonu.', pron: 'ਉ ਪੋਤਪੁਨੋਸਤੀ ਸਾਮ ਸੇ ਪਰੀਲਾਗੋਦੀਓ ਰਾਦਨੋਮ ਓਕਰੂਝੇਨੀਉ ਇ ਸਾਮੋਸਤਾਲਨੋ ਵੋਦੀਮ ਨਾਇਸਲੋਝੇਨੀਏ ਪਰੋਏਕਤੇ ਉ ਪੋਗੋਨੂ', pa: 'ਮੈਂ ਕੰਮ ਦੇ ਮਾਹੌਲ ਵਿੱਚ ਪੂਰੀ ਤਰ੍ਹਾਂ ਢਲ ਚੁੱਕਾ ਹਾਂ ਅਤੇ ਪਲਾਂਟ ਦੇ ਸਭ ਤੋਂ ਮੁਸ਼ਕਿਲ ਪ੍ਰੋਜੈਕਟਾਂ ਨੂੰ ਖੁਦ ਸੰਭਾਲਦਾ ਹਾਂ।', ro: 'Main kamm de mahaul vich poori tarah dhal chukka haan ate plant de sabh ton mushkil projects nu khud sambhalda haan.' },
       { id: 48, type: 'sentence', level: 'C2', cat: 'Advanced', hr: 'Dugoročna suradnja temelji se na međusobnom poštovanju, povjerenju i vrhunskim rezultatima.', pron: 'ਦੁਗੋਰੋਚਨਾ ਸੁਰਾਦਨੀਆ ਤੇਮੇਲੀ ਸੇ ਨਾ ਮੇਦਜੂਸੋਬਨੋਮ ਪੋਸ਼ਤੋਵਾਨੀਉ, ਪੋਵੀਏਰੇਨੀਉ ਇ ਵਰਹੁਨਸਕੀਮ ਰੇਜ਼ੁਲਤਾਤੀਮਾ', pa: 'ਲੰਬੇ ਸਮੇਂ ਦਾ ਸਾਥ ਆਪਸੀ ਸਤਿਕਾਰ, ਭਰੋਸੇ ਅਤੇ ਸ਼ਾਨਦਾਰ ਨਤੀਜਿਆਂ ਉੱਤੇ ਟਿਕਿਆ ਹੁੰਦਾ ਹੈ।', ro: 'Lambe samein da saath aapsi satikar, bharose ate shaandar natijeyan utte tikiya hunda hai.' }
     ];
@@ -656,6 +673,7 @@
       learnedIds = [];
     }
 
+    // ================= SELECT LEVEL FUNCTION =================
     function selectLevel(lvl) {
       try {
         var cleanLvl = String(lvl || 'ALL').toUpperCase().trim();
@@ -706,9 +724,11 @@
       }
     }
 
+    // Both casing variants bound globally
     window.selectLevel = selectLevel;
     window.selectlevel = selectLevel;
 
+    // ================= NATIVE BROWSER AUDIO =================
     function speakCroatian(text, rate) {
       try {
         var playRate = typeof rate === 'number' ? rate : 1.0;
@@ -750,6 +770,7 @@
     window.speakCroatian = speakCroatian;
     window.speakById = speakById;
 
+    // ================= UI CONTROLS =================
     function setScriptMode(mode) {
       scriptMode = mode || 'both';
       var modes = ['both', 'pa', 'ro'];
@@ -813,6 +834,7 @@
     window.switchTab = switchTab;
     window.toggleLearned = toggleLearned;
 
+    // ================= RENDER CONTENT =================
     function renderContent() {
       updateProgressBadge();
       var area = document.getElementById('content-area');
@@ -890,6 +912,7 @@
 
     window.renderContent = renderContent;
 
+    // ================= GRAMMAR & NUMBERS =================
     function renderGrammar(area) {
       var numbers = [
         ['1', 'Jedan', 'ਯੇਦਾਨ'], ['2', 'Dva', 'ਦਵਾ'], ['3', 'Tri', 'ਤਰੀ'], ['4', 'Četiri', 'ਚੇਤੀਰੀ'],
@@ -931,6 +954,7 @@
         '</div>';
     }
 
+    // ================= QUIZ =================
     function initQuiz() {
       var pool = database.filter(function(i) {
         return currentLevel === 'ALL' || i.level === currentLevel;
@@ -1003,6 +1027,7 @@
     window.initQuiz = initQuiz;
     window.checkQuizAnswer = checkQuizAnswer;
 
+    // Initialize app on load
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
         selectLevel('ALL');
