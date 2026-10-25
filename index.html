@@ -1,1 +1,564 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਕ੍ਰੋਏਸ਼ੀਅਨ - ਪੰਜਾਬੀ ਡਿਕਸ਼ਨਰੀ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-box:focus {
+            border-color: #3498db;
+        }
+        .word-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .word-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .word-item:hover {
+            background-color: #f9f9f9;
+        }
+        .croatian {
+            font-weight: bold;
+            color: #2980b9;
+            font-size: 18px;
+        }
+        .punjabi {
+            color: #27ae60;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>ਕ੍ਰੋਏਸ਼ੀਅਨ - ਪੰਜਾਬੀ ਡਿਕਸ਼ਨਰੀ</h1>
+    <input type="text" id="searchInput" class="search-box" placeholder="ਸ਼ਬਦ ਖੋਜੋ (Search words)..." onkeyup="searchWord()">
+    
+    <ul id="wordList" class="word-list">
+        <!-- A -->
+        <li class="word-item"><span class="croatian">administrator</span><span class="punjabi">ਪ੍ਰਬੰਧਕ</span></li>
+        <li class="word-item"><span class="croatian">adresa</span><span class="punjabi">ਪਤਾ</span></li>
+        <li class="word-item"><span class="croatian">ako</span><span class="punjabi">ਜੇ / ਜੇਕਰ</span></li>
+        <li class="word-item"><span class="croatian">ali</span><span class="punjabi">ਪਰ</span></li>
+        <li class="word-item"><span class="croatian">alkohol</span><span class="punjabi">ਸ਼ਰਾਬ</span></li>
+        <li class="word-item"><span class="croatian">ambulanta</span><span class="punjabi">ਡਾਕਟਰ ਦਾ ਕਮਰਾ / ਕਲੀਨਿਕ</span></li>
+        <li class="word-item"><span class="croatian">Amerikanac</span><span class="punjabi">ਅਮਰੀਕੀ</span></li>
+        <li class="word-item"><span class="croatian">amfiteatar</span><span class="punjabi">ਅੰਫਿਥੀਏਟਰ</span></li>
+        <li class="word-item"><span class="croatian">analiza</span><span class="punjabi">ਵਿਸ਼ਲੇਸ਼ਣ</span></li>
+        <li class="word-item"><span class="croatian">anđeo</span><span class="punjabi">ਫਰਿਸ਼ਤਾ</span></li>
+        <li class="word-item"><span class="croatian">arhitekt</span><span class="punjabi">ਆਰਕੀਟੈਕਟ</span></li>
+        <li class="word-item"><span class="croatian">arhitektica</span><span class="punjabi">ਮਹਿਲਾ ਆਰਕੀਟੈਕਟ</span></li>
+        <li class="word-item"><span class="croatian">asistent</span><span class="punjabi">ਸਹਾਇਕ</span></li>
+        <li class="word-item"><span class="croatian">Austrija</span><span class="punjabi">ਆਸਟਰੀਆ</span></li>
+        <li class="word-item"><span class="croatian">Austrijanac</span><span class="punjabi">ਆਸਟ੍ਰੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">autobus</span><span class="punjabi">ਬੱਸ</span></li>
+        <li class="word-item"><span class="croatian">autobusni kolodvor</span><span class="punjabi">ਬੱਸ ਸਟੇਸ਼ਨ</span></li>
+        <li class="word-item"><span class="croatian">autobusno stajalište</span><span class="punjabi">ਬੱਸ ਸਟਾਪ / ਬੱਸ ਸਟੇਸ਼ਨ</span></li>
+        <li class="word-item"><span class="croatian">automobil, auto</span><span class="punjabi">ਕਾਰ</span></li>
+        <li class="word-item"><span class="croatian">autor</span><span class="punjabi">ਲੇਖਕ</span></li>
+        <li class="word-item"><span class="croatian">avion</span><span class="punjabi">ਹਵਾਈ ਜਹਾਜ਼</span></li>
+
+        <!-- B -->
+        <li class="word-item"><span class="croatian">bacati</span><span class="punjabi">ਸੁੱਟਣਾ (ਅਨਿਰੰਤਰ)</span></li>
+        <li class="word-item"><span class="croatian">baciti</span><span class="punjabi">ਸੁੱਟਣਾ (ਨਿਰੰਤਰ)</span></li>
+        <li class="word-item"><span class="croatian">bačva</span><span class="punjabi">ਪੀਪਾ / ਬੈਰਲ</span></li>
+        <li class="word-item"><span class="croatian">bahat</span><span class="punjabi">ਹੰਕਾਰੀ</span></li>
+        <li class="word-item"><span class="croatian">baka</span><span class="punjabi">ਦਾਦੀ</span></li>
+        <li class="word-item"><span class="croatian">balet</span><span class="punjabi">ਬੈਲੇ ਨਾਚ</span></li>
+        <li class="word-item"><span class="croatian">banana</span><span class="punjabi">ਕੇਲਾ</span></li>
+        <li class="word-item"><span class="croatian">banka</span><span class="punjabi">ਬੈਂਕ</span></li>
+        <li class="word-item"><span class="croatian">bankar</span><span class="punjabi">ਬੈਂਕਰ</span></li>
+        <li class="word-item"><span class="croatian">bankarica</span><span class="punjabi">ਮਹਿਲਾ ਬੈਂਕਰ</span></li>
+        <li class="word-item"><span class="croatian">barka</span><span class="punjabi">ਕਿਸ਼ਤੀ</span></li>
+        <li class="word-item"><span class="croatian">baš</span><span class="punjabi">ਬੱਸ / ਸੱਚਮੁੱਚ</span></li>
+        <li class="word-item"><span class="croatian">baviti se</span><span class="punjabi">ਰੁੱਝੇ ਹੋਣਾ</span></li>
+        <li class="word-item"><span class="croatian">baza</span><span class="punjabi">ਆਧਾਰ / ਬੇਸ</span></li>
+        <li class="word-item"><span class="croatian">bazen</span><span class="punjabi">ਤੈਰਾਕੀ ਪੂਲ</span></li>
+        <li class="word-item"><span class="croatian">beba</span><span class="punjabi">ਬੱਚਾ</span></li>
+        <li class="word-item"><span class="croatian">Beč</span><span class="punjabi">ਵਿਆਨਾ (ਸ਼ਹਿਰ)</span></li>
+        <li class="word-item"><span class="croatian">bedž</span><span class="punjabi">ਬੈਜ</span></li>
+        <li class="word-item"><span class="croatian">bez</span><span class="punjabi">ਬਿਨਾਂ</span></li>
+        <li class="word-item"><span class="croatian">bezvoljan</span><span class="punjabi">ਉਦਾਸ / ਬੇਦਿਲ</span></li>
+        <li class="word-item"><span class="croatian">bič</span><span class="punjabi">ਕੋਰੜਾ</span></li>
+        <li class="word-item"><span class="croatian">bicikl</span><span class="punjabi">ਸਾਈਕਲ</span></li>
+        <li class="word-item"><span class="croatian">biciklistička staza</span><span class="punjabi">ਸਾਈਕਲ ਮਾਰਗ</span></li>
+        <li class="word-item"><span class="croatian">bijel</span><span class="punjabi">ਚਿੱਟਾ</span></li>
+        <li class="word-item"><span class="croatian">bik</span><span class="punjabi">ਬਲਦ</span></li>
+        <li class="word-item"><span class="croatian">bilje</span><span class="punjabi">ਜੜ੍ਹੀਆਂ-ਬੂਟੀਆਂ</span></li>
+        <li class="word-item"><span class="croatian">bilješka</span><span class="punjabi">ਨੋਟ</span></li>
+        <li class="word-item"><span class="croatian">bilježnica</span><span class="punjabi">ਕਾਪੀ / ਨੋਟਬੁੱਕ</span></li>
+        <li class="word-item"><span class="croatian">biljka</span><span class="punjabi">ਪੌਦਾ</span></li>
+        <li class="word-item"><span class="croatian">biologija</span><span class="punjabi">ਜੀਵ ਵਿਗਿਆਨ</span></li>
+        <li class="word-item"><span class="croatian">birati</span><span class="punjabi">ਚੁਣਨਾ / ਡਾਇਲ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">biti</span><span class="punjabi">ਹੋਣਾ</span></li>
+        <li class="word-item"><span class="croatian">bježati</span><span class="punjabi">ਭੱਜਣਾ</span></li>
+        <li class="word-item"><span class="croatian">blag</span><span class="punjabi">ਨਰਮ / ਹਲਕਾ</span></li>
+        <li class="word-item"><span class="croatian">blijed</span><span class="punjabi">ਫਿੱਕਾ / ਪੀਲਾ</span></li>
+        <li class="word-item"><span class="croatian">blizu</span><span class="punjabi">ਨੇੜੇ</span></li>
+        <li class="word-item"><span class="croatian">bodež</span><span class="punjabi">ਖੰਜਰ</span></li>
+        <li class="word-item"><span class="croatian">boja</span><span class="punjabi">ਰੰਗ</span></li>
+        <li class="word-item"><span class="croatian">bojati se</span><span class="punjabi">ਡਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">bok</span><span class="punjabi">ਹੈਲੋ / ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</span></li>
+        <li class="word-item"><span class="croatian">bokserice</span><span class="punjabi">ਬਾਕਸਰ ਸ਼ਾਰਟਸ</span></li>
+        <li class="word-item"><span class="croatian">bol (f)</span><span class="punjabi">ਮਾਨਸਿਕ ਦਰਦ</span></li>
+        <li class="word-item"><span class="croatian">bol (m)</span><span class="punjabi">ਸਰੀਰਕ ਦਰਦ</span></li>
+        <li class="word-item"><span class="croatian">bolesnik</span><span class="punjabi">ਮਰੀਜ਼</span></li>
+        <li class="word-item"><span class="croatian">bolest</span><span class="punjabi">ਬਿਮਾਰੀ</span></li>
+        <li class="word-item"><span class="croatian">bolestan</span><span class="punjabi">ਬਿਮਾਰ</span></li>
+        <li class="word-item"><span class="croatian">boljeti</span><span class="punjabi">ਦਰਦ ਹੋਣਾ</span></li>
+        <li class="word-item"><span class="croatian">bolnica</span><span class="punjabi">ਹਸਪਤਾਲ</span></li>
+        <li class="word-item"><span class="croatian">boravište</span><span class="punjabi">ਨਿਵਾਸ ਸਥਾਨ</span></li>
+        <li class="word-item"><span class="croatian">bos</span><span class="punjabi">ਨੰਗੇ ਪੈਰੀਂ</span></li>
+        <li class="word-item"><span class="croatian">Bosna i Hercegovina</span><span class="punjabi">ਬੋਸਨੀਆ ਅਤੇ ਹਰਰਸੇਗੋਵਿਨਾ</span></li>
+        <li class="word-item"><span class="croatian">Bošnjak</span><span class="punjabi">ਬੋਸਨੀਆਈ</span></li>
+        <li class="word-item"><span class="croatian">Božić</span><span class="punjabi">ਕ੍ਰਿਸਮਸ</span></li>
+        <li class="word-item"><span class="croatian">brat</span><span class="punjabi">ਭਰਾ</span></li>
+        <li class="word-item"><span class="croatian">brati</span><span class="punjabi">ਤੋੜਨਾ / ਚੁਣਨਾ</span></li>
+        <li class="word-item"><span class="croatian">brava</span><span class="punjabi">ਜਿੰਦਰਾ</span></li>
+        <li class="word-item"><span class="croatian">Brazilac</span><span class="punjabi">ਬ੍ਰਾਜ਼ੀਲੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">brdo</span><span class="punjabi">ਪਹਾੜੀ</span></li>
+        <li class="word-item"><span class="croatian">briga</span><span class="punjabi">ਚਿੰਤਾ</span></li>
+        <li class="word-item"><span class="croatian">brijati se</span><span class="punjabi">ਦਾੜ੍ਹੀ ਬਣਾਉਣਾ / ਸ਼ੇਵ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">brinuti se</span><span class="punjabi">ਚਿੰਤਾ ਕਰਨਾ / ਧਿਆਨ ਰੱਖਣਾ</span></li>
+        <li class="word-item"><span class="croatian">brisati</span><span class="punjabi">ਮਿਟਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">Britanac</span><span class="punjabi">ਬ੍ਰਿਟਿਸ਼</span></li>
+        <li class="word-item"><span class="croatian">brod</span><span class="punjabi">ਕਿਸ਼ਤੀ / ਜਹਾਜ਼</span></li>
+        <li class="word-item"><span class="croatian">broj</span><span class="punjabi">ਨੰਬਰ</span></li>
+        <li class="word-item"><span class="croatian">broš</span><span class="punjabi">ਬਰੋਚ</span></li>
+        <li class="word-item"><span class="croatian">brz</span><span class="punjabi">ਤੇਜ਼</span></li>
+        <li class="word-item"><span class="croatian">brzina</span><span class="punjabi">ਰਫ਼ਤਾਰ / ਗਤੀ</span></li>
+        <li class="word-item"><span class="croatian">brzo</span><span class="punjabi">ਜਲਦੀ</span></li>
+        <li class="word-item"><span class="croatian">buča</span><span class="punjabi">ਕੱਦੂ</span></li>
+        <li class="word-item"><span class="croatian">budući da</span><span class="punjabi">ਕਿਉਂਕਿ / ਜਿਵੇਂ ਕਿ</span></li>
+        <li class="word-item"><span class="croatian">buka</span><span class="punjabi">ਰੌਲਾ</span></li>
+        <li class="word-item"><span class="croatian">buknuti</span><span class="punjabi">ਭੜਕ ਉੱਠਣਾ</span></li>
+        <li class="word-item"><span class="croatian">bura</span><span class="punjabi">ਤੂਫ਼ਾਨੀ ਹਵਾ (ਬੋਰਾ)</span></li>
+
+        <!-- Č -->
+        <li class="word-item"><span class="croatian">čačkalica</span><span class="punjabi">ਟੂਥਪਿਕ</span></li>
+        <li class="word-item"><span class="croatian">čaj</span><span class="punjabi">ਚਾਹ</span></li>
+        <li class="word-item"><span class="croatian">čak</span><span class="punjabi">ਇੱਥੋਂ ਤੱਕ ਕਿ / ਵੀ</span></li>
+        <li class="word-item"><span class="croatian">čarapa</span><span class="punjabi">ਜੁਰਾਬ</span></li>
+        <li class="word-item"><span class="croatian">čas</span><span class="punjabi">ਪਲ / ਸਮਾਂ</span></li>
+        <li class="word-item"><span class="croatian">čaša</span><span class="punjabi">ਗਲਾਸ</span></li>
+        <li class="word-item"><span class="croatian">časopis</span><span class="punjabi">ਰਸਾਲਾ / ਮੈਗਜ਼ੀਨ</span></li>
+        <li class="word-item"><span class="croatian">Čeh</span><span class="punjabi">ਚੈੱਕ (ਨਾਗਰਿਕ)</span></li>
+        <li class="word-item"><span class="croatian">čekati</span><span class="punjabi">ਉਡੀਕਣਾ</span></li>
+        <li class="word-item"><span class="croatian">centar</span><span class="punjabi">ਕੇਂਦਰ</span></li>
+        <li class="word-item"><span class="croatian">češalj</span><span class="punjabi">ਕੰਘਾ</span></li>
+        <li class="word-item"><span class="croatian">Češka</span><span class="punjabi">ਚੈੱਕ ਗਣਰਾਜ</span></li>
+        <li class="word-item"><span class="croatian">češki</span><span class="punjabi">ਚੈੱਕ (ਭਾਸ਼ਾ/ਦੇਸ਼ ਨਾਲ ਸਬੰਧਤ)</span></li>
+        <li class="word-item"><span class="croatian">češljati se</span><span class="punjabi">ਕੰਘਾ ਕਰਨਾ / ਵਾਲ ਵਾਹੁਣਾ</span></li>
+        <li class="word-item"><span class="croatian">čest</span><span class="punjabi">ਅਕਸਰ / ਵਾਰ-ਵਾਰ</span></li>
+        <li class="word-item"><span class="croatian">cesta</span><span class="punjabi">ਸੜਕ</span></li>
+        <li class="word-item"><span class="croatian">čestica</span><span class="punjabi">ਕਣ</span></li>
+        <li class="word-item"><span class="croatian">često</span><span class="punjabi">ਅਕਸਰ</span></li>
+        <li class="word-item"><span class="croatian">četiri</span><span class="punjabi">ਚਾਰ</span></li>
+        <li class="word-item"><span class="croatian">četka</span><span class="punjabi">ਬੁਰਸ਼</span></li>
+        <li class="word-item"><span class="croatian">četkica</span><span class="punjabi">ਟੂਥ ਬੁਰਸ਼</span></li>
+        <li class="word-item"><span class="croatian">četrdeset</span><span class="punjabi">ਚਾਲ੍ਹੀ (40)</span></li>
+        <li class="word-item"><span class="croatian">četrnaest</span><span class="punjabi">ਚੌਦਾਂ (14)</span></li>
+        <li class="word-item"><span class="croatian">četvrtak</span><span class="punjabi">ਵੀਰਵਾਰ</span></li>
+        <li class="word-item"><span class="croatian">četvrti</span><span class="punjabi">ਚੌਥਾ</span></li>
+        <li class="word-item"><span class="croatian">čiji</span><span class="punjabi">ਕิਸਦਾ / ਕਿਹਦਾ</span></li>
+        <li class="word-item"><span class="croatian">cilj</span><span class="punjabi">ਟੀਚਾ / ਮੰਤਵ</span></li>
+        <li class="word-item"><span class="croatian">cimer</span><span class="punjabi">ਰੂਮਮੇਟ / ਕਮਰੇ ਦਾ ਸਾਥੀ</span></li>
+        <li class="word-item"><span class="croatian">čip</span><span class="punjabi">ਚਿੱਪ</span></li>
+        <li class="word-item"><span class="croatian">cipele</span><span class="punjabi">ਜੁੱਤੇ</span></li>
+        <li class="word-item"><span class="croatian">čipka</span><span class="punjabi">ਲੇਸ</span></li>
+        <li class="word-item"><span class="croatian">čistiti</span><span class="punjabi">ਸਾਫ਼ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">čitati</span><span class="punjabi">ਪੜ੍ਹਨਾ</span></li>
+        <li class="word-item"><span class="croatian">čizma</span><span class="punjabi">ਬੂਟ</span></li>
+        <li class="word-item"><span class="croatian">čizme</span><span class="punjabi">ਬੂਟ (ਜੁੱਤੇ)</span></li>
+        <li class="word-item"><span class="croatian">cjepivo</span><span class="punjabi">ਟੀਕਾ</span></li>
+        <li class="word-item"><span class="croatian">članak zakona</span><span class="punjabi">ਕਾਨੂੰਨ ਦੀ ਧਾਰਾ</span></li>
+        <li class="word-item"><span class="croatian">članak</span><span class="punjabi">ਲੇਖ / ਧਾਰਾ</span></li>
+        <li class="word-item"><span class="croatian">čokolada</span><span class="punjabi">ਚਾਕਲੇਟ</span></li>
+        <li class="word-item"><span class="croatian">čovjek</span><span class="punjabi">ਆਦਮੀ / ਇਨਸਾਨ</span></li>
+        <li class="word-item"><span class="croatian">crkva</span><span class="punjabi">ਗਿਰਜਾਘਰ / ਚਰਚ</span></li>
+        <li class="word-item"><span class="croatian">crn</span><span class="punjabi">ਕਾਲਾ</span></li>
+        <li class="word-item"><span class="croatian">Crna Gora</span><span class="punjabi">ਮੋਂਟੇਨੇਗ੍ਰੋ</span></li>
+        <li class="word-item"><span class="croatian">crno vino</span><span class="punjabi">ਲਾਲ ਵਾਈਨ</span></li>
+        <li class="word-item"><span class="croatian">Crnogorac</span><span class="punjabi">ਮੋਂਟੇਨੇਗ੍ਰੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">crnogorski</span><span class="punjabi">ਮੋਂਟੇਨੇਗ੍ਰੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">crtati</span><span class="punjabi">ਡਰਾਇੰਗ ਕਰਨਾ / ਤਸਵੀਰ ਬਣਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">crtež</span><span class="punjabi">ਡਰਾਇੰਗ / ਚਿੱਤਰ</span></li>
+        <li class="word-item"><span class="croatian">crven</span><span class="punjabi">ਲਾਲ</span></li>
+        <li class="word-item"><span class="croatian">čuditi se</span><span class="punjabi">ਹੈਰਾਨ ਹੋਣਾ</span></li>
+        <li class="word-item"><span class="croatian">čudo</span><span class="punjabi">ਚਮਤਕਾਰ</span></li>
+        <li class="word-item"><span class="croatian">ćup</span><span class="punjabi">ਜੱਗ / ਘੜਾ</span></li>
+        <li class="word-item"><span class="croatian">cura</span><span class="punjabi">ਕੁੜੀ / ਪ੍ਰੇਮਿਕਾ</span></li>
+        <li class="word-item"><span class="croatian">cvijeće</span><span class="punjabi">ਫੁੱਲ</span></li>
+        <li class="word-item"><span class="croatian">cvijet</span><span class="punjabi">ਫੁੱਲ</span></li>
+
+        <!-- D -->
+        <li class="word-item"><span class="croatian">da</span><span class="punjabi">ਹਾਂ / ਕਿ</span></li>
+        <li class="word-item"><span class="croatian">dalek</span><span class="punjabi">ਦੂਰ</span></li>
+        <li class="word-item"><span class="croatian">daleko</span><span class="punjabi">ਬਹੁਤ ਦੂਰ</span></li>
+        <li class="word-item"><span class="croatian">dan</span><span class="punjabi">ਦਿਨ</span></li>
+        <li class="word-item"><span class="croatian">danas</span><span class="punjabi">ਅੱਜ</span></li>
+        <li class="word-item"><span class="croatian">Danska</span><span class="punjabi">ਡੈਨਮਾਰਕ</span></li>
+        <li class="word-item"><span class="croatian">danski</span><span class="punjabi">ਡੈਨਿਸ਼</span></li>
+        <li class="word-item"><span class="croatian">dar</span><span class="punjabi">ਤੋਹਫ਼ਾ / ਉਪਹਾਰ</span></li>
+        <li class="word-item"><span class="croatian">darovati</span><span class="punjabi">ਤੋਹਫ਼ਾ ਦੇਣਾ</span></li>
+        <li class="word-item"><span class="croatian">dati</span><span class="punjabi">ਦੇਣਾ (ਪੂਰਾ)</span></li>
+        <li class="word-item"><span class="croatian">datoteka</span><span class="punjabi">ਫ਼ਾਈਲ</span></li>
+        <li class="word-item"><span class="croatian">davati</span><span class="punjabi">ਦੇਣਾ (ਅਧੂਰਾ)</span></li>
+        <li class="word-item"><span class="croatian">debeo</span><span class="punjabi">ਮੋਟਾ</span></li>
+        <li class="word-item"><span class="croatian">dekan</span><span class="punjabi">ਡੀਨ</span></li>
+        <li class="word-item"><span class="croatian">derati se</span><span class="punjabi">ਚੀਕਣਾ / ਉੱਚੀ ਬੋਲਣਾ</span></li>
+        <li class="word-item"><span class="croatian">deset</span><span class="punjabi">ਦੱਸ (10)</span></li>
+        <li class="word-item"><span class="croatian">deseti</span><span class="punjabi">ਦੱਸਵਾਂ</span></li>
+        <li class="word-item"><span class="croatian">desno</span><span class="punjabi">ਸੱਜੇ</span></li>
+        <li class="word-item"><span class="croatian">deva</span><span class="punjabi">ਉੱਠ</span></li>
+        <li class="word-item"><span class="croatian">devedeset</span><span class="punjabi">ਨੱਬੇ (90)</span></li>
+        <li class="word-item"><span class="croatian">devet</span><span class="punjabi">ਨੌਂ (9)</span></li>
+        <li class="word-item"><span class="croatian">deveti</span><span class="punjabi">ਨੌਵਾਂ</span></li>
+        <li class="word-item"><span class="croatian">devetnaest</span><span class="punjabi">ਉੱਨੀ (19)</span></li>
+        <li class="word-item"><span class="croatian">dezodorans</span><span class="punjabi">ਡਿਓਡਰੈਂਟ</span></li>
+        <li class="word-item"><span class="croatian">dijeliti</span><span class="punjabi">ਵੰਡਣਾ</span></li>
+        <li class="word-item"><span class="croatian">dijete</span><span class="punjabi">ਬੱਚਾ</span></li>
+        <li class="word-item"><span class="croatian">Dinja</span><span class="punjabi">ਖਰਬੂਜਾ</span></li>
+        <li class="word-item"><span class="croatian">dio</span><span class="punjabi">ਹਿੱਸਾ</span></li>
+        <li class="word-item"><span class="croatian">dionice</span><span class="punjabi">ਸ਼ੇਅਰ / ਹਿੱਸੇਦਾਰੀ</span></li>
+        <li class="word-item"><span class="croatian">diploma</span><span class="punjabi">ਡਿਪਲੋਮਾ</span></li>
+        <li class="word-item"><span class="croatian">diplomirati</span><span class="punjabi">ਗ੍ਰੈਜੂਏਸ਼ਨ ਪੂਰੀ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">diplomski rad</span><span class="punjabi">ਥੀਸਿਸ</span></li>
+        <li class="word-item"><span class="croatian">diplomski studij</span><span class="punjabi">ਗ੍ਰੈਜੂਏਟ ਪੜ੍ਹਾਈ</span></li>
+        <li class="word-item"><span class="croatian">direktor</span><span class="punjabi">ਡਾਇਰੈਕਟਰ / ਨਿਰਦੇਸ਼ਕ</span></li>
+        <li class="word-item"><span class="croatian">direktorica</span><span class="punjabi">ਮਹਿਲਾ ਡਾਇਰੈਕਟਰ</span></li>
+        <li class="word-item"><span class="croatian">dizati</span><span class="punjabi">ਚੁੱਕਣਾ</span></li>
+        <li class="word-item"><span class="croatian">dječak</span><span class="punjabi">ਮੁੰਡਾ</span></li>
+        <li class="word-item"><span class="croatian">Djed Božićnjak</span><span class="punjabi">ਸਾਂਤਾ ਕਲਾਜ</span></li>
+        <li class="word-item"><span class="croatian">djed</span><span class="punjabi">ਦਾਦਾ / ਨਾਨਾ</span></li>
+        <li class="word-item"><span class="croatian">djelo</span><span class="punjabi">ਕੰਮ / ਰਚਨਾ</span></li>
+        <li class="word-item"><span class="croatian">djevojčica</span><span class="punjabi">ਕੁੜੀ</span></li>
+        <li class="word-item"><span class="croatian">dnevni boravak</span><span class="punjabi">ਬੈਠਕ / ਲਿਵਿੰਗ ਰੂਮ</span></li>
+        <li class="word-item"><span class="croatian">do</span><span class="punjabi">ਤੱਕ</span></li>
+        <li class="word-item"><span class="croatian">dob</span><span class="punjabi">ਉਮਰ</span></li>
+        <li class="word-item"><span class="croatian">dobar</span><span class="punjabi">ਚੰਗਾ</span></li>
+        <li class="word-item"><span class="croatian">dobar dan</span><span class="punjabi">ਚੰਗਾ ਦਿਨ / ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ (ਦੁਪਹਿਰ ਦਾ ਸਮਾਂ)</span></li>
+        <li class="word-item"><span class="croatian">dobiti</span><span class="punjabi">ਪ੍ਰਾਪਤ ਕਰਨਾ (ਪੂਰਾ)</span></li>
+        <li class="word-item"><span class="croatian">dobivati</span><span class="punjabi">ਪ੍ਰਾਪਤ ਕਰਨਾ (ਅਧੂਰਾ)</span></li>
+        <li class="word-item"><span class="croatian">dobro</span><span class="punjabi">ਠೀਕ ਹੈ / ਵਧੀਆ</span></li>
+        <li class="word-item"><span class="croatian">dobro jutro</span><span class="punjabi">ਸੁਬਾਹ ਬਖ਼ੈਰ / ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ (ਸਵੇਰ ਦਾ ਸਮਾਂ)</span></li>
+        <li class="word-item"><span class="croatian">doći</span><span class="punjabi">ਆਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">dogovor</span><span class="punjabi">ਸਮਝੌਤਾ / ਸਹਿਮਤੀ</span></li>
+        <li class="word-item"><span class="croatian">dok</span><span class="punjabi">ਜਦੋਂ ਕਿ / ਜਦ ਤੱਕ</span></li>
+        <li class="word-item"><span class="croatian">doktor znanosti</span><span class="punjabi">ਪੀ.ਐਚ.ਡੀ. ਡਾਕਟਰ / ਵਿਗਿਆਨ ਦਾ ਡਾਕਟਰ</span></li>
+        <li class="word-item"><span class="croatian">doktor</span><span class="punjabi">ਡਾਕਟਰ</span></li>
+        <li class="word-item"><span class="croatian">dokument</span><span class="punjabi">ਦਸਤਾਵੇਜ਼</span></li>
+        <li class="word-item"><span class="croatian">dolaziti</span><span class="punjabi">ਆਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">dolje</span><span class="punjabi">ਹੇਠਾਂ</span></li>
+        <li class="word-item"><span class="croatian">domovnica</span><span class="punjabi">ਰਾਸ਼ਟਰੀ ਪਛਾਣ ਪੱਤਰ / ਨਾਗਰਿਕਤਾ ਸਰਟੀਫਿਕੇਟ</span></li>
+        <li class="word-item"><span class="croatian">donijeti</span><span class="punjabi">ਲਿਆਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">donje rublje</span><span class="punjabi">ਅੰਦਰੂਨੀ ਕੱਪੜੇ</span></li>
+        <li class="word-item"><span class="croatian">doručak</span><span class="punjabi">ਨਾਸ਼ਤਾ</span></li>
+        <li class="word-item"><span class="croatian">doviđenja</span><span class="punjabi">ਅਲਵਿਦਾ</span></li>
+        <li class="word-item"><span class="croatian">drag</span><span class="punjabi">ਪਿਆਰਾ / ਚੰਗਾ</span></li>
+        <li class="word-item"><span class="croatian">drago mi je</span><span class="punjabi">ਮੈਨੂੰ ਖ਼ੁਸ਼ੀ ਹੋਈ / ਮਿਲ ਕੇ ਖ਼ੁਸ਼ੀ ਹੋਈ</span></li>
+        <li class="word-item"><span class="croatian">drhtati</span><span class="punjabi">ਕੰਬਣਾ</span></li>
+        <li class="word-item"><span class="croatian">drugi</span><span class="punjabi">ਦੂਜਾ</span></li>
+        <li class="word-item"><span class="croatian">društven</span><span class="punjabi">ਮਿਲਣਸਾਰ / ਸਮਾਜਿਕ</span></li>
+        <li class="word-item"><span class="croatian">društvena igra</span><span class="punjabi">ਬੋਰਡ ਗੇਮ</span></li>
+        <li class="word-item"><span class="croatian">društvena mreža</span><span class="punjabi">ਸੋਸ਼ਲ ਨੈੱਟਵਰਕ</span></li>
+        <li class="word-item"><span class="croatian">društvo</span><span class="punjabi">ਸਮਾਜ / ਕੰਪਨੀ</span></li>
+        <li class="word-item"><span class="croatian">družiti se</span><span class="punjabi">ਮਿਲਣਾ-ਗਿਲਣਾ / ਇਕੱਠੇ ਸਮਾਂ ਬਿਤਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">drveće</span><span class="punjabi">ਰੁੱਖ / ਦਰੱਖਤ</span></li>
+        <li class="word-item"><span class="croatian">drvo</span><span class="punjabi">ਰੁੱਖ / ਲੱਕੜ</span></li>
+        <li class="word-item"><span class="croatian">država</span><span class="punjabi">ਦੇਸ਼ / ਰਾਜ</span></li>
+        <li class="word-item"><span class="croatian">državljanstvo</span><span class="punjabi">ਨਾਗਰਿਕਤਾ</span></li>
+        <li class="word-item"><span class="croatian">dubok</span><span class="punjabi">ਡੂੰਘਾ</span></li>
+        <li class="word-item"><span class="croatian">dućan</span><span class="punjabi">ਦੁਕਾਨ</span></li>
+        <li class="word-item"><span class="croatian">dug</span><span class="punjabi">ਕਰਜ਼ਾ / ਲੰਮਾ</span></li>
+        <li class="word-item"><span class="croatian">dugo</span><span class="punjabi">ਲੰਮਾ / ਦੇਰ ਨਾਲ</span></li>
+        <li class="word-item"><span class="croatian">duh</span><span class="punjabi">ਭੂਤ / ਆਤਮਾ</span></li>
+        <li class="word-item"><span class="croatian">duša</span><span class="punjabi">ਰੂਹ / ਆਤਮਾ</span></li>
+        <li class="word-item"><span class="croatian">dužan</span><span class="punjabi">ਦੇਣਦਾਰ / ਵਚਨਬੱਧ</span></li>
+        <li class="word-item"><span class="croatian">dužnik</span><span class="punjabi">ਦੇਣਦਾਰ / ਕਰਜ਼ਦਾਰ</span></li>
+        <li class="word-item"><span class="croatian">dva</span><span class="punjabi">ਦੋ (2)</span></li>
+        <li class="word-item"><span class="croatian">dvadeset</span><span class="punjabi">ਵੀਹ (20)</span></li>
+        <li class="word-item"><span class="croatian">dvanaest</span><span class="punjabi">ਬਾਰਾਂ (12)</span></li>
+        <li class="word-item"><span class="croatian">džamija</span><span class="punjabi">ਮਸਜਿਦ</span></li>
+        <li class="word-item"><span class="croatian">džem</span><span class="punjabi">ਮੁਰੱਬਾ / ਜੈਮ</span></li>
+        <li class="word-item"><span class="croatian">džemper</span><span class="punjabi">ਸਵੈਟਰ</span></li>
+        <li class="word-item"><span class="croatian">džentlmen</span><span class="punjabi">ਸੱਜਣ / ਜੈਂਟਲਮੈਨ</span></li>
+        <li class="word-item"><span class="croatian">džep</span><span class="punjabi">ਜੇਬ</span></li>
+        <li class="word-item"><span class="croatian">džez</span><span class="punjabi">ਜੈਜ਼ (ਸੰਗੀਤ)</span></li>
+        <li class="word-item"><span class="croatian">džezva</span><span class="punjabi">ਲੰਬੇ ਹੈਂਡਲ ਵਾਲਾ ਤੁਰਕੀ ਕੌਫੀ ਪੋਟ</span></li>
+        <li class="word-item"><span class="croatian">džip</span><span class="punjabi">ਜੀਪ</span></li>
+        <li class="word-item"><span class="croatian">džogirati</span><span class="punjabi">ਜਾਗਿੰਗ ਕਰਨਾ</span></li>
+
+        <!-- E & F -->
+        <li class="word-item"><span class="croatian">ECTS bodovi</span><span class="punjabi">ECTS ਪੁਆਇੰਟ / ਅੰਕ</span></li>
+        <li class="word-item"><span class="croatian">ekonomija</span><span class="punjabi">ਅਰਥ ਸ਼ਾਸਤਰ / ਆਰਥਿਕਤਾ</span></li>
+        <li class="word-item"><span class="croatian">ekonomist</span><span class="punjabi">ਅਰਥ ਸ਼ਾਸਤਰੀ</span></li>
+        <li class="word-item"><span class="croatian">ekonomistica</span><span class="punjabi">ਮਹਿਲਾ ਅਰਥ ਸ਼ਾਸਤਰੀ</span></li>
+        <li class="word-item"><span class="croatian">ekran</span><span class="punjabi">ਸਕ੍ਰੀਨ</span></li>
+        <li class="word-item"><span class="croatian">elektronička pošta</span><span class="punjabi">ਈ-ਮੇਲ</span></li>
+        <li class="word-item"><span class="croatian">energija</span><span class="punjabi">ਊਰਜਾ</span></li>
+        <li class="word-item"><span class="croatian">engleski</span><span class="punjabi">ਅੰਗਰੇਜ਼ੀ</span></li>
+        <li class="word-item"><span class="croatian">Estonac</span><span class="punjabi">ਇਸਟੋਨੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">faks</span><span class="punjabi">ਫ਼ੈਕਸ / ਕਾਲਜ</span></li>
+        <li class="word-item"><span class="croatian">fakultet / faks</span><span class="punjabi">ਕਾਲਜ</span></li>
+        <li class="word-item"><span class="croatian">farma</span><span class="punjabi">ਫ਼ਾਰਮ</span></li>
+        <li class="word-item"><span class="croatian">film</span><span class="punjabi">ਫ਼ਿਲਮ / ਮੂਵੀ</span></li>
+        <li class="word-item"><span class="croatian">Finac</span><span class="punjabi">ਫਿਨਲੈਂਡ ਦਾ ਨਾਗਰਿਕ</span></li>
+        <li class="word-item"><span class="croatian">Finska</span><span class="punjabi">ਫਿਨਲੈਂਡ</span></li>
+        <li class="word-item"><span class="croatian">finski</span><span class="punjabi">ਫਿਨਿਸ਼</span></li>
+        <li class="word-item"><span class="croatian">fizika</span><span class="punjabi">ਭੌਤਿਕ ਵਿਗਿਆਨ</span></li>
+        <li class="word-item"><span class="croatian">fotograf</span><span class="punjabi">ਫ਼ੋਟੋਗ੍ਰਾਫ਼ਰ</span></li>
+        <li class="word-item"><span class="croatian">fotografija</span><span class="punjabi">ਫ਼ੋਟੋਗ੍ਰਾਫ਼ੀ</span></li>
+        <li class="word-item"><span class="croatian">fotografkinja</span><span class="punjabi">ਮਹਿਲਾ ਫ਼ੋਟੋਗ੍ਰਾਫ਼ਰ</span></li>
+        <li class="word-item"><span class="croatian">Francuska</span><span class="punjabi">ਫਰਾਂਸ</span></li>
+        <li class="word-item"><span class="croatian">francuski</span><span class="punjabi">ਫਰਾਂਸੀਸੀ</span></li>
+        <li class="word-item"><span class="croatian">Francuz</span><span class="punjabi">ਫਰਾਂਸੀਸੀ ਨਾਗਰਿਕ</span></li>
+        <li class="word-item"><span class="croatian">frizer</span><span class="punjabi">ਵਾਲ ਕੱਟਣ ਵਾਲਾ</span></li>
+        <li class="word-item"><span class="croatian">frizerka</span><span class="punjabi">ਮਹਿਲਾ ਹੇਅਰਡ੍ਰעਸਰ</span></li>
+        <li class="word-item"><span class="croatian">frizura</span><span class="punjabi">ਵਾਲਾਂ ਦਾ ਸਟਾਈਲ / ਹੇਅਰਕੱਟ</span></li>
+        <li class="word-item"><span class="croatian">funkcija</span><span class="punjabi">ਕੰਮ / ਫੰਕਸ਼ਨ</span></li>
+
+        <!-- G -->
+        <li class="word-item"><span class="croatian">gaćice</span><span class="punjabi">ਅੰਦਰੂਨੀ ਕੱਪੜੇ / ਜੰਗੀਆ</span></li>
+        <li class="word-item"><span class="croatian">gdje</span><span class="punjabi">ਕਿੱਥੇ</span></li>
+        <li class="word-item"><span class="croatian">gel</span><span class="punjabi">ਜੈੱਲ</span></li>
+        <li class="word-item"><span class="croatian">gladan</span><span class="punjabi">ਭੁੱਖਾ</span></li>
+        <li class="word-item"><span class="croatian">glagol</span><span class="punjabi">ਕਿਰਿਆ</span></li>
+        <li class="word-item"><span class="croatian">glas</span><span class="punjabi">ਆਵਾਜ਼</span></li>
+        <li class="word-item"><span class="croatian">glasati</span><span class="punjabi">ਵੋਟ ਪਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">glasno</span><span class="punjabi">ਉੱਚੀ ਆਵਾਜ਼ ਵਿੱਚ</span></li>
+        <li class="word-item"><span class="croatian">glava</span><span class="punjabi">ਸਿਰ</span></li>
+        <li class="word-item"><span class="croatian">glazba</span><span class="punjabi">ਸੰਗੀਤ</span></li>
+        <li class="word-item"><span class="croatian">glazbeni</span><span class="punjabi">ਸੰਗੀਤ ਕਲਾਸ / ਸੰਗੀਤਕ</span></li>
+        <li class="word-item"><span class="croatian">gledati</span><span class="punjabi">ਦੇਖਣਾ</span></li>
+        <li class="word-item"><span class="croatian">gljiva</span><span class="punjabi">ਖੁੰਭ / ਮਸ਼ਰੂਮ</span></li>
+        <li class="word-item"><span class="croatian">glodati</span><span class="punjabi">ਕੁਤਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">glumac</span><span class="punjabi">ਅਦਾਕਾਰ</span></li>
+        <li class="word-item"><span class="croatian">glumiti</span><span class="punjabi">ਅਦਾਕਾਰੀ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">glup</span><span class="punjabi">ਮੂਰਖ</span></li>
+        <li class="word-item"><span class="croatian">gnijezdo</span><span class="punjabi">ਆਲ੍ਹਣਾ</span></li>
+        <li class="word-item"><span class="croatian">godina</span><span class="punjabi">ਸਾਲ</span></li>
+        <li class="word-item"><span class="croatian">godišnji odmor</span><span class="punjabi">ਛੁੱਟੀਆਂ</span></li>
+        <li class="word-item"><span class="croatian">gol</span><span class="punjabi">ਨੰਗਾ</span></li>
+        <li class="word-item"><span class="croatian">golub</span><span class="punjabi">ਕਬੂਤਰ</span></li>
+        <li class="word-item"><span class="croatian">gore</span><span class="punjabi">ਉੱਪਰ</span></li>
+        <li class="word-item"><span class="croatian">gorjeti</span><span class="punjabi">ਸੜਨਾ</span></li>
+        <li class="word-item"><span class="croatian">gospođa</span><span class="punjabi">ਬੀਬੀ / ਮੈਡਮ</span></li>
+        <li class="word-item"><span class="croatian">gost</span><span class="punjabi">ਮਹਿਮਾਨ</span></li>
+        <li class="word-item"><span class="croatian">govor</span><span class="punjabi">ਭਾਸ਼ਣ</span></li>
+        <li class="word-item"><span class="croatian">govoriti</span><span class="punjabi">ਬੋਲਣਾ / ਗੱਲ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">grad</span><span class="punjabi">ਸ਼ਹਿਰ</span></li>
+        <li class="word-item"><span class="croatian">gradivo</span><span class="punjabi">ਸਮੱਗਰੀ / ਸਿਲੇਬਸ</span></li>
+        <li class="word-item"><span class="croatian">grah</span><span class="punjabi">ਫਲੀਆਂ / ਬੀਨਜ਼</span></li>
+        <li class="word-item"><span class="croatian">gramatika</span><span class="punjabi">ਵਿਆਕਰਣ</span></li>
+        <li class="word-item"><span class="croatian">Grčka</span><span class="punjabi">ਗ੍ਰੀਸ</span></li>
+        <li class="word-item"><span class="croatian">grčki</span><span class="punjabi">ਯੂਨਾਨੀ</span></li>
+        <li class="word-item"><span class="croatian">grijati</span><span class="punjabi">ਗਰਮ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">gripa</span><span class="punjabi">ਫਲੂ</span></li>
+        <li class="word-item"><span class="croatian">griznuti</span><span class="punjabi">ਵੱਢਣਾ</span></li>
+        <li class="word-item"><span class="croatian">grliti se</span><span class="punjabi">ਗਲ਼ ਮਿਲਣਾ</span></li>
+        <li class="word-item"><span class="croatian">grlo</span><span class="punjabi">ਗਲ਼</span></li>
+        <li class="word-item"><span class="croatian">grožđe</span><span class="punjabi">ਅੰਗੂਰ</span></li>
+        <li class="word-item"><span class="croatian">grub</span><span class="punjabi">ਰੁੱਖਾ</span></li>
+        <li class="word-item"><span class="croatian">grudnjak</span><span class="punjabi">ਬ੍ਰਾ</span></li>
+        <li class="word-item"><span class="croatian">gubiti</span><span class="punjabi">ਗਵਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">gucnuti</span><span class="punjabi">ਘੁੱਟ ਭਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">gumica</span><span class="punjabi">ਰਬੜ</span></li>
+        <li class="word-item"><span class="croatian">gurati</span><span class="punjabi">ਧੱਕਾ ਦੇਣਾ</span></li>
+        <li class="word-item"><span class="croatian">gurnuti</span><span class="punjabi">ਧੱਕਾ ਮਾਰਨਾ</span></li>
+
+        <!-- H -->
+        <li class="word-item"><span class="croatian">haljina</span><span class="punjabi">ਪੁਸ਼ਾਕ / ਸੂਟ</span></li>
+        <li class="word-item"><span class="croatian">hlače</span><span class="punjabi">ਪੈਂਟ</span></li>
+        <li class="word-item"><span class="croatian">hladan</span><span class="punjabi">ਠੰਢਾ</span></li>
+        <li class="word-item"><span class="croatian">hladno</span><span class="punjabi">ਠੰਢ</span></li>
+        <li class="word-item"><span class="croatian">hodati</span><span class="punjabi">ਤੁਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">hokej</span><span class="punjabi">ਹਾਕੀ</span></li>
+        <li class="word-item"><span class="croatian">honorarni posao</span><span class="punjabi">ਪਾਰਟ-ਟਾਈਮ ਨੌਕਰੀ</span></li>
+        <li class="word-item"><span class="croatian">hotel</span><span class="punjabi">ਹੋਟਲ</span></li>
+        <li class="word-item"><span class="croatian">hrabar</span><span class="punjabi">ਬਹਾਦਰ</span></li>
+        <li class="word-item"><span class="croatian">hrana</span><span class="punjabi">ਭੋਜਨ</span></li>
+        <li class="word-item"><span class="croatian">hraniti</span><span class="punjabi">ਖੁਆਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">Hrvat</span><span class="punjabi">ਕ੍ਰੋਏਸ਼ੀਆਈ ਨਾਗਰਿਕ</span></li>
+        <li class="word-item"><span class="croatian">Hrvatska</span><span class="punjabi">ਕ੍ਰੋਏਸ਼ੀਆ</span></li>
+        <li class="word-item"><span class="croatian">hrvatski</span><span class="punjabi">ਕ੍ਰੋਏਸ਼ੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">hrđa</span><span class="punjabi">ਜੰਗਾਲ</span></li>
+        <li class="word-item"><span class="croatian">htjeti</span><span class="punjabi">ਚਾਹੁਣਾ</span></li>
+        <li class="word-item"><span class="croatian">hvala</span><span class="punjabi">ਧੰਨਵਾਦ</span></li>
+
+        <!-- I -->
+        <li class="word-item"><span class="croatian">i</span><span class="punjabi">ਅਤੇ</span></li>
+        <li class="word-item"><span class="croatian">ići</span><span class="punjabi">ਜਾਣਾ</span></li>
+        <li class="word-item"><span class="croatian">ideja</span><span class="punjabi">ਵਿਚਾਰ</span></li>
+        <li class="word-item"><span class="croatian">identitet</span><span class="punjabi">ਪਛਾਣ</span></li>
+        <li class="word-item"><span class="croatian">igla</span><span class="punjabi">ਸੂਈ</span></li>
+        <li class="word-item"><span class="croatian">igra</span><span class="punjabi">ਖੇਡ</span></li>
+        <li class="word-item"><span class="croatian">igrač</span><span class="punjabi">ਖਿਡਾਰੀ</span></li>
+        <li class="word-item"><span class="croatian">igračka</span><span class="punjabi">ਖਿਡੌਣਾ</span></li>
+        <li class="word-item"><span class="croatian">igralište</span><span class="punjabi">ਖੇਡ ਦਾ ਮੈਦਾਨ</span></li>
+        <li class="word-item"><span class="croatian">igrati</span><span class="punjabi">ਖੇਡਣਾ</span></li>
+        <li class="word-item"><span class="croatian">ikona</span><span class="punjabi">ਆਈਕਾਨ</span></li>
+        <li class="word-item"><span class="croatian">ili</span><span class="punjabi">ਜਾਂ</span></li>
+        <li class="word-item"><span class="croatian">imati</span><span class="punjabi">ਰੱਖਣਾ</span></li>
+        <li class="word-item"><span class="croatian">ime</span><span class="punjabi">ਨਾਮ</span></li>
+        <li class="word-item"><span class="croatian">imenica</span><span class="punjabi">ਨਾਂਵ</span></li>
+        <li class="word-item"><span class="croatian">imenik</span><span class="punjabi">ਐਡਰੈੱਸ ਬੁੱਕ</span></li>
+        <li class="word-item"><span class="croatian">indeks</span><span class="punjabi">ਵਿਦਿਆਰਥੀ ਰਿਕਾਰਡ ਬੁੱਕ</span></li>
+        <li class="word-item"><span class="croatian">industrija</span><span class="punjabi">ਉਦਯੋਗ</span></li>
+        <li class="word-item"><span class="croatian">inovativan</span><span class="punjabi">ਨਵੀਨਤਾਕਾਰੀ</span></li>
+        <li class="word-item"><span class="croatian">instrukcije</span><span class="punjabi">ਸਬਕ</span></li>
+        <li class="word-item"><span class="croatian">interes</span><span class="punjabi">ਦਿਲਚਸਪੀ</span></li>
+        <li class="word-item"><span class="croatian">internet</span><span class="punjabi">ਇੰਟਰਨੈੱਟ</span></li>
+        <li class="word-item"><span class="croatian">Irac</span><span class="punjabi">ਆਇਰਿਸ਼ ਨਾਗਰਿਕ</span></li>
+        <li class="word-item"><span class="croatian">Irska</span><span class="punjabi">ਆਇਰਲੈਂਡ</span></li>
+        <li class="word-item"><span class="croatian">isključiti</span><span class="punjabi">ਬੰਦ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">iskustvo</span><span class="punjabi">ਤਜਰਬਾ</span></li>
+        <li class="word-item"><span class="croatian">ispeći</span><span class="punjabi">ਬੇਕ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">ispisivati</span><span class="punjabi">ਪ੍ਰਿੰਟ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">ispit</span><span class="punjabi">ਇਮਤਿਹਾਨ</span></li>
+        <li class="word-item"><span class="croatian">ispitni rok</span><span class="punjabi">ਇਮਤਿਹਾਨ ਦੀ ਮਿਤੀ</span></li>
+        <li class="word-item"><span class="croatian">ispod</span><span class="punjabi">ਹੇਠਾਂ</span></li>
+        <li class="word-item"><span class="croatian">ispred</span><span class="punjabi">ਸਾਹਮਣੇ</span></li>
+        <li class="word-item"><span class="croatian">ispričati se</span><span class="punjabi">ਮਾਫ਼ੀ ਮੰਗਣਾ</span></li>
+        <li class="word-item"><span class="croatian">isprika</span><span class="punjabi">ਮਾਫ਼ੀ</span></li>
+        <li class="word-item"><span class="croatian">isprobavati</span><span class="punjabi">ਕੋਸ਼ਿਸ਼ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">istok</span><span class="punjabi">ਪੂਰਬ</span></li>
+        <li class="word-item"><span class="croatian">istraživač</span><span class="punjabi">ਖੋਜਕਰਤਾ</span></li>
+        <li class="word-item"><span class="croatian">istraživanje</span><span class="punjabi">ਖੋਜ</span></li>
+        <li class="word-item"><span class="croatian">istraživati</span><span class="punjabi">ਖੋਜ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">Italija</span><span class="punjabi">ਇਟਲੀ</span></li>
+        <li class="word-item"><span class="croatian">iz</span><span class="punjabi">ਤੋਂ</span></li>
+        <li class="word-item"><span class="croatian">iz dana u dan</span><span class="punjabi">ਦਿਨੋ-ਦਿਨ</span></li>
+        <li class="word-item"><span class="croatian">iza</span><span class="punjabi">ਪਿੱਛੇ</span></li>
+        <li class="word-item"><span class="croatian">izabrati</span><span class="punjabi">ਚੁਣਨਾ</span></li>
+        <li class="word-item"><span class="croatian">izaći</span><span class="punjabi">ਬਾਹਰ ਜਾਣਾ</span></li>
+        <li class="word-item"><span class="croatian">izazivati</span><span class="punjabi">ਕਾਰਨ ਬਣਨਾ</span></li>
+        <li class="word-item"><span class="croatian">izborni</span><span class="punjabi">ਚੋਣਵਾਂ</span></li>
+        <li class="word-item"><span class="croatian">izdanje</span><span class="punjabi">ਪ੍ਰਕਾਸ਼ਨ</span></li>
+        <li class="word-item"><span class="croatian">izdatak</span><span class="punjabi">ਖ਼ਰਚਾ</span></li>
+        <li class="word-item"><span class="croatian">izdavač</span><span class="punjabi">ਪ੍ਰਕਾਸ਼ਕ</span></li>
+        <li class="word-item"><span class="croatian">izlaganje</span><span class="punjabi">ਪੇਸ਼ਕਾਰੀ</span></li>
+        <li class="word-item"><span class="croatian">izlagati</span><span class="punjabi">ਪੇਸ਼ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">izlazak</span><span class="punjabi">ਬਾਹਰ ਜਾਣਾ</span></li>
+        <li class="word-item"><span class="croatian">izlaziti</span><span class="punjabi">ਬਾਹਰ ਨਿਕਲਣਾ</span></li>
+        <li class="word-item"><span class="croatian">izlet</span><span class="punjabi">ਯਾਤਰਾ</span></li>
+        <li class="word-item"><span class="croatian">izložba</span><span class="punjabi">ਪ੍ਰਦਰਸ਼ਨੀ</span></li>
+        <li class="word-item"><span class="croatian">između</span><span class="punjabi">ਵਿਚਕਾਰ</span></li>
+        <li class="word-item"><span class="croatian">iznad</span><span class="punjabi">ਉੱਪਰ</span></li>
+        <li class="word-item"><span class="croatian">izraz</span><span class="punjabi">ਪ੍ਰਗਟਾਵਾ</span></li>
+        <li class="word-item"><span class="croatian">izraziti</span><span class="punjabi">ਪ੍ਰਗਟ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">izrađivati</span><span class="punjabi">ਤਿਆਰ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">izvješće</span><span class="punjabi">ਰਿਪੋਰਟ</span></li>
+        <li class="word-item"><span class="croatian">izvoli</span><span class="punjabi">ਲਓ ਜੀ / ਹਾਜ਼ਰ ਹੈ</span></li>
+
+        <!-- J -->
+        <li class="word-item"><span class="croatian">ja</span><span class="punjabi">ਮੈਂ</span></li>
+        <li class="word-item"><span class="croatian">jabuka</span><span class="punjabi">ਸੇਬ</span></li>
+        <li class="word-item"><span class="croatian">jagoda</span><span class="punjabi">ਸਟ੍ਰਾਬੇਰੀ</span></li>
+        <li class="word-item"><span class="croatian">jakna</span><span class="punjabi">ਜੈਕਟ</span></li>
+        <li class="word-item"><span class="croatian">jako</span><span class="punjabi">ਬਹੁਤ</span></li>
+        <li class="word-item"><span class="croatian">japanke</span><span class="punjabi">ਫਲਿੱਪ-ਫਲਾਪ (ਚੱਪਲਾਂ)</span></li>
+        <li class="word-item"><span class="croatian">jastuk</span><span class="punjabi">ਸਿਹਾਣਾ / ਤਕੀਆ</span></li>
+        <li class="word-item"><span class="croatian">javiti se</span><span class="punjabi">ਫ਼ੋਨ ਚੁੱਕਣਾ</span></li>
+        <li class="word-item"><span class="croatian">javni prijevoz</span><span class="punjabi">ਪਬਲਿਕ ਟ੍ਰਾਂਸਪੋਰਟ</span></li>
+        <li class="word-item"><span class="croatian">jedan</span><span class="punjabi">ਇੱਕ (1)</span></li>
+        <li class="word-item"><span class="croatian">jedanaest</span><span class="punjabi">ਗਿਆਰਾਂ (11)</span></li>
+        <li class="word-item"><span class="croatian">jednadžba</span><span class="punjabi">ਸਮੀਕਰਨ</span></li>
+        <li class="word-item"><span class="croatian">jeftin</span><span class="punjabi">ਸਸਤਾ</span></li>
+        <li class="word-item"><span class="croatian">jelo</span><span class="punjabi">ਭੋਜਨ / ਡਿਸ਼</span></li>
+        <li class="word-item"><span class="croatian">jelovnik</span><span class="punjabi">ਮੀਨੂ</span></li>
+        <li class="word-item"><span class="croatian">jer</span><span class="punjabi">ਕਿਉਂਕਿ</span></li>
+        <li class="word-item"><span class="croatian">jesen</span><span class="punjabi">ਪਤਝੜ</span></li>
+        <li class="word-item"><span class="croatian">jesti</span><span class="punjabi">ਖਾਣਾ</span></li>
+        <li class="word-item"><span class="croatian">jež</span><span class="punjabi">ਕੰਢਿਆਣਾ / ਹੇਜਹਾਗ</span></li>
+        <li class="word-item"><span class="croatian">jezero</span><span class="punjabi">ਝੀਲ</span></li>
+        <li class="word-item"><span class="croatian">jezik</span><span class="punjabi">ਭਾਸ਼ਾ / ਜੀਭ</span></li>
+        <li class="word-item"><span class="croatian">joga</span><span class="punjabi">ਯੋਗਾ</span></li>
+        <li class="word-item"><span class="croatian">jučer</span><span class="punjabi">ਕੱਲ੍ਹ (ਬੀਤਿਆ ਹੋਇਆ)</span></li>
+        <li class="word-item"><span class="croatian">jug</span><span class="punjabi">ਦੱਖਣ</span></li>
+        <li class="word-item"><span class="croatian">juha</span><span class="punjabi">ਸੂਪ</span></li>
+        <li class="word-item"><span class="croatian">junak</span><span class="punjabi">ਹੀਰੋ / ਨਾਇਕ</span></li>
+        <li class="word-item"><span class="croatian">jutro</span><span class="punjabi">ਸਵੇਰ</span></li>
+
+        <!-- K -->
+        <li class="word-item"><span class="croatian">k / ka</span><span class="punjabi">ਵੱਲ / ਤੱਕ</span></li>
+        <li class="word-item"><span class="croatian">kabanica</span><span class="punjabi">ਬਰਸਾਤੀ ਕੋਟ / ਰੇਨਕੋਟ</span></li>
+        <li class="word-item"><span class="croatian">kad / kada</span><span class="punjabi">ਕਦੋਂ / ਜਦੋਂ</span></li>
+        <li class="word-item"><span class="croatian">kafić</span><span class="punjabi">ਕੈਫ਼ੇ</span></li>
+        <li class="word-item"><span class="croatian">kajati se</span><span class="punjabi">ਪਛਤਾਵਾ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">kakav</span><span class="punjabi">ਕਿਹੋ ਜਿਹਾ / ਕੀ</span></li>
+        <li class="word-item"><span class="croatian">kako</span><span class="punjabi">ਕਿਵੇਂ</span></li>
+        <li class="word-item"><span class="croatian">kalkulator</span><span class="punjabi">ਕੈਲਕੁਲੇਟਰ</span></li>
+        <li class="word-item"><span class="croatian">kamata</span><span class="punjabi">ਵਿਆਜ</span></li>
+        <li class="word-item"><span class="croatian">kamo</span><span class="punjabi">ਕਿੱਥੇ</span></li>
+        <li class="word-item"><span class="croatian">Kanada</span><span class="punjabi">ਕੈਨੇਡਾ</span></li>
+        <li class="word-item"><span class="croatian">kao</span><span class="punjabi">ਜਿਵੇਂ ਕਿ / ਵਰਗਾ</span></li>
+        <li class="word-item"><span class="croatian">kapa</span><span class="punjabi">ਟੋਪੀ</span></li>
+        <li class="word-item"><span class="croatian">kapetan</span><span class="punjabi">ਕਪਤਾਨ</span></li>
+        <li class="word-item"><span class="croatian">kaput</span><span class="punjabi">ਕੋਟ</span></li>
+        <li class="word-item"><span class="croatian">karaoke</span><span class="punjabi">ਕਰਾਓਕੇ</span></li>
+        <li class="word-item"><span class="croatian">karijera</span><span class="punjabi">ਕੈਰੀਅਰ</span></li>
+        <li class="word-item"><span class="croatian">kaša</span><span class="punjabi">ਦਲਿਆ</span></li>
+        <li class="word-item"><span class="croatian">kava</span><span class="punjabi">ਕੌਫੀ</span></li>
+        <li class="word-item"><span class="croatian">kazališna predstava</span><span class="punjabi">ਨਾਟਕ / ਥੀਏਟਰ ਪ੍ਰਦਰਸ਼ਨ</span></li>
+        <li class="word-item"><span class="croatian">kazalište</span><span class="punjabi">ਥੀਏਟਰ</span></li>
+        <li class="word-item"><span class="croatian">kazati</span><span class="punjabi">ਦੱਸਣਾ / ਦਿਖਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">kemija</span><span class="punjabi">ਰਸਾਇਣ ਵਿਗਿਆਨ</span></li>
+        <li class="word-item"><span class="croatian">kemijska olovka</span><span class="punjabi">ਪੈੱਨ</span></li>
+        <li class="word-item"><span class="croatian">kihnuti</span><span class="punjabi">ਛਿੱਕ ਮਾਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">kimnuti</span><span class="punjabi">ਸਿਰ ਹਿਲਾਉਣਾ</span></li>
+        <li class="word-item"><span class="croatian">Kinez</span><span class="punjabi">ਚੀਨੀ (ਨਾਗਰਿਕ)</span></li>
+        <li class="word-item"><span class="croatian">kino</span><span class="punjabi">ਸਿਨੇਮਾ</span></li>
+        <li class="word-item"><span class="croatian">kirurg</span><span class="punjabi">ਸਰਜਨ</span></li>
+        <li class="word-item"><span class="croatian">kiša</span><span class="punjabi">ਮੀਂਹ</span></li>
+        <li class="word-item"><span class="croatian">kišobran</span><span class="punjabi">ਛੱਤਰੀ</span></li>
+        <li class="word-item"><span class="croatian">kist</span><span class="punjabi">ਕੁਰਚੀ / ਬੁਰਸ਼</span></li>
+        <li class="word-item"><span class="croatian">kit</span><span class="punjabi">ਵ੍ਹੇਲ ਮੱਛੀ</span></li>
+        <li class="word-item"><span class="croatian">kleknuti</span><span class="punjabi">ਗੋਡਿਆਂ ਭਾਰ ਬੈਠਣਾ</span></li>
+        <li class="word-item"><span class="croatian">kliješta</span><span class="punjabi">ਪਲੱਸ / ਸਣ</span></li>
+        <li class="word-item"><span class="croatian">kliknuti</span><span class="punjabi">ਕਲਿੱਕ ਕਰਨਾ</span></li>
+        <li class="word-item"><span class="croatian">klub</span><span class="punjabi">ਕਲੱਬ</span></li>
+        <li class="word-item"><span class="croatian">klupa</span><span class="punjabi">ਬੈਂਚ</span></li>
+        <li class="word-item"><span class="croatian">knjiga</span><span class="punjabi">ਕਿਤਾਬ</span></li>
+        <li class="word-item"><span class="croatian">knjižnica</span><span class="punjabi">ਲਾਇਬ੍ਰੇਰੀ</span></li>
+        <li class="word-item"><span class="croatian">knjižničar</span><span class="punjabi">ਲਾਇਬ੍ਰੇਰੀਅਨ</span></li>
+        <li class="word-item"><span class="croatian">knjižničarka</span><span class="punjabi">ਮਹਿਲਾ ਲਾਇਬ੍ਰੇਰੀਅਨ
