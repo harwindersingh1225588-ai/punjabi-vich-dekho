@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਕ੍ਰੋਏਸ਼ੀਅਨ - ਪੰਜਾਬੀ ਡਿਕਸ਼ਨਰੀ ਅਤੇ ਕੁਇਜ਼</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-btn.active {
+            background-color: #3498db;
+            color: white;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .word-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 450px;
+            overflow-y: auto;
+        }
+        .word-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .word-item:hover {
+            background-color: #f9f9f9;
+        }
+        .croatian {
+            font-weight: bold;
+            color: #2980b9;
+            font-size: 18px;
+        }
+        .punjabi {
+            color: #27ae60;
+            font-size: 18px;
+        }
+        .speak-btn {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .speak-btn:hover {
+            background-color: #d68910;
+        }
+        /* Quiz Styles */
+        .quiz-box {
+            text-align: center;
+            padding: 20px;
+        }
+        .quiz-word {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .option-btn {
+            padding: 15px;
+            font-size: 16px;
+            background-color: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .option-btn:hover {
+            background-color: #d5dbdb;
+        }
+        #quizResult {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .next-btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>ਕ੍ਰੋਏਸ਼ੀਅਨ - ਪੰਜਾਬੀ ਡਿਕਸ਼ਨਰੀ
