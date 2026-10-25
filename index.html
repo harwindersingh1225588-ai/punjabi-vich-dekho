@@ -68,4 +68,564 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #dc262
+      background: linear-gradient(135deg, #dc2626, #ffffff, #2563eb);
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .brand p {
+      font-size: 13px;
+      color: var(--accent-sky);
+    }
+
+    .script-switcher {
+      display: flex;
+      background: var(--bg-panel);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      gap: 4px;
+    }
+
+    .script-btn {
+      background: transparent;
+      color: var(--text-muted);
+      border: none;
+      padding: 6px 12px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .script-btn.active {
+      background: var(--accent-blue);
+      color: #ffffff;
+    }
+
+    /* Level Selector Panel */
+    .panel {
+      background-color: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .panel-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .level-badge {
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-sky);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-left: 8px;
+    }
+
+    .controls-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    select, input[type="text"] {
+      background-color: var(--bg-panel);
+      color: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    select:focus, input[type="text"]:focus {
+      border-color: var(--accent-sky);
+    }
+
+    .progress-pill {
+      font-size: 12px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .level-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      gap: 8px;
+    }
+
+    .lvl-btn {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      color: var(--text-main);
+      transition: all 0.15s ease;
+    }
+
+    .lvl-btn:hover {
+      border-color: #64748b;
+    }
+
+    .lvl-btn.level-active {
+      border-color: var(--accent-sky) !important;
+      background-color: #172554 !important;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+    }
+
+    .lvl-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--accent-sky);
+    }
+
+    .lvl-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Main Tabs */
+    .tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      background-color: var(--bg-panel);
+      color: #cbd5e1;
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .tab-btn.active-tab {
+      background: linear-gradient(135deg, var(--accent-red), #2563eb);
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    /* Search & Filter Bar */
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-row input {
+      flex: 1;
+      min-width: 220px;
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+
+    .search-row select {
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card.learned {
+      border-color: var(--accent-green);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .tag-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tag-lvl {
+      background: #0c4a6e;
+      color: #7dd3fc;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .tag-cat {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .learn-btn {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 7px;
+      border: 1px solid #475569;
+      background: #334155;
+      color: #e2e8f0;
+      cursor: pointer;
+    }
+
+    .learn-btn.done {
+      background: #059669;
+      border-color: #10b981;
+      color: #ffffff;
+    }
+
+    .hr-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 6px;
+    }
+
+    .pron-box {
+      display: inline-block;
+      background: var(--bg-dark);
+      color: #7dd3fc;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .pa-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .ro-text {
+      font-size: 14px;
+      color: #cbd5e1;
+      font-style: italic;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-audio {
+      flex: 1;
+      background: var(--accent-blue);
+      color: #ffffff;
+      border: none;
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-audio:hover {
+      background: #0369a1;
+    }
+
+    .btn-slow {
+      background: #334155;
+      color: var(--accent-amber);
+      border: none;
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-slow:hover {
+      background: #475569;
+    }
+
+    /* Grammar & Numbers */
+    .grammar-box {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .grammar-box h3 {
+      color: var(--accent-amber);
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .rule-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .rule-list li {
+      background: var(--bg-dark);
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .num-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+
+    .num-btn {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: left;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .num-btn:hover {
+      background: #334155;
+    }
+
+    /* Quiz Styling */
+    .quiz-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .quiz-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .quiz-opt {
+      width: 100%;
+      text-align: left;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quiz-opt:hover {
+      background: #334155;
+      border-color: var(--accent-sky);
+    }
+
+    .empty-box {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="hr-badge">HR</div>
+        <div>
+          <h1>ਪੰਜਾਬੀ ਤੋਂ ਕ੍ਰੋਏਸ਼ੀਅਨ ਸਿੱਖੋ (Nauči Hrvatski)</h1>
+          <p>100% Offline A1 to C2 Course • Shabad • Vaak • Audio • Quiz</p>
+        </div>
+      </div>
+
+      <div class="script-switcher">
+        <button type="button" onclick="setScriptMode('both')" id="script-both" class="script-btn active">ਦੋਵੇਂ (Both)</button>
+        <button type="button" onclick="setScriptMode('pa')" id="script-pa" class="script-btn">ਗੁਰਮੁਖੀ</button>
+        <button type="button" onclick="setScriptMode('ro')" id="script-ro" class="script-btn">Roman Punjabi</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Level Selector Panel -->
+    <section class="panel">
+      <div class="panel-top">
+        <div>
+          <strong>🎯 ਲੈਵਲ ਚੁਣੋ (Select Level):</strong>
+          <span id="current-level-indicator" class="level-badge">ALL (A1-C2)</span>
+        </div>
+
+        <div class="controls-right">
+          <select id="level-dropdown" onchange="selectLevel(this.value)">
+            <option value="ALL">ਸਾਰੇ ਲੈਵਲ (ALL Levels A1-C2)</option>
+            <option value="A1">A1 - ਸ਼ੁਰੂਆਤੀ (Beginner)</option>
+            <option value="A2">A2 - ਰੋਜ਼ਾਨਾ (Elementary)</option>
+            <option value="B1">B1 - ਕੰਮ-ਕਾਜ & Factory (Intermediate)</option>
+            <option value="B2">B2 - ਦਫ਼ਤਰੀ & Permits (Upper Int.)</option>
+            <option value="C1">C1 - ਐਡਵਾਂਸ (Advanced)</option>
+            <option value="C2">C2 - ਮਾਹਿਰ (Mastery)</option>
+          </select>
+          <span id="progress-badge" class="progress-pill">Learned: 0</span>
+        </div>
+      </div>
+
+      <div class="level-grid">
+        <button type="button" onclick="selectLevel('ALL')" id="lvl-ALL" class="lvl-btn level-active">
+          <div class="lvl-title">ALL (ਸਾਰੇ)</div>
+          <div class="lvl-sub">A1 to C2 Mix</div>
+        </button>
+        <button type="button" onclick="selectLevel('A1')" id="lvl-A1" class="lvl-btn">
+          <div class="lvl-title">A1 • ਸ਼ੁਰੂਆਤੀ</div>
+          <div class="lvl-sub">Beginner</div>
+        </button>
+        <button type="button" onclick="selectLevel('A2')" id="lvl-A2" class="lvl-btn">
+          <div class="lvl-title">A2 • ਰੋਜ਼ਾਨਾ</div>
+          <div class="lvl-sub">Daily Life</div>
+        </button>
+        <button type="button" onclick="selectLevel('B1')" id="lvl-B1" class="lvl-btn">
+          <div class="lvl-title">B1 • ਕੰਮ-ਕਾਜ</div>
+          <div class="lvl-sub">Work & Welding</div>
+        </button>
+        <button type="button" onclick="selectLevel('B2')" id="lvl-B2" class="lvl-btn">
+          <div class="lvl-title">B2 • ਦਫ਼ਤਰੀ</div>
+          <div class="lvl-sub">Permits & Pay</div>
+        </button>
+        <button type="button" onclick="selectLevel('C1')" id="lvl-C1" class="lvl-btn">
+          <div class="lvl-title">C1 • ਐਡਵਾਂਸ</div>
+          <div class="lvl-sub">Fluent & Tech</div>
+        </button>
+        <button type="button" onclick="selectLevel('C2')" id="lvl-C2" class="lvl-btn">
+          <div class="lvl-title">C2 • ਮਾਹਿਰ</div>
+          <div class="lvl-sub">Mastery</div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-bar">
+      <button type="button" onclick="switchTab('words')" id="tab-words" class="tab-btn active-tab">📖 ਸ਼ਬਦ (Vocabulary)</button>
+      <button type="button" onclick="switchTab('sentences')" id="tab-sentences" class="tab-btn">💬 ਵਾਕ (Sentences)</button>
+      <button type="button" onclick="switchTab('grammar')" id="tab-grammar" class="tab-btn">🧠 ਵਿਆਕਰਣ & ਗਿਣਤੀ (Grammar)</button>
+      <button type="button" onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn">🎯 ਟੈਸਟ / Quiz (A1-C2)</button>
+    </div>
+
+    <!-- Search & Filter Bar -->
+    <div id="search-container" class="search-row">
+      <input
+        type="text"
+        id="search-input"
+        oninput="renderContent()"
+        placeholder="🔍 ਇੱਥੇ ਖੋਜੋ (Search Punjabi, Roman, Croatian)..."
+      />
+      <select id="category-filter" onchange="renderContent()">
+        <option value="ALL">ਸਾਰੀਆਂ ਸ਼੍ਰੇਣੀਆਂ (All Categories)</option>
+        <option value="Greetings">ਮੁਲਾਕਾਤ (Greetings)</option>
+        <option value="Daily">ਰੋਜ਼ਾਨਾ ਜੀਵਨ (Daily Life)</option>
+        <option value="Work">ਕੰਮ ਅਤੇ ਵਰਕਸ਼ਾਪ (Work & Welding)</option>
+        <option value="Health">ਸਿਹਤ ਅਤੇ ਪਰਮਿਟ (Health & Legal)</option>
+        <option value="Advanced">ਐਡਵਾਂਸ ਗੱਲਬਾਤ (Advanced & Idioms)</option>
+      </select>
+    </div>
+
+    <!-- Main Dynamic Area -->
+    <div id="content-area"></div>
+
+  </main>
+
+  <script>
+    // ================= COMPLETE OFFLINE A1-C2 DATABASE =================
+    var database = [
+      { id: 1, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Bok / Pozdrav', pron: 'ਬੋਕ / ਪੋਜ਼ਦਰਾਵ (Bok / Pozdrav)', pa: 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ / ਹੈਲੋ', ro: 'Sat Sri Akal / Hello' },
+      { id: 2, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Dobro jutro', pron: 'ਦੋਬਰੋ ਯੂਤਰੋ (Dobro yutro)', pa: 'ਸ਼ੁਭ ਸਵੇਰ', ro: 'Shubh Saver (Good morning)' },
+      { id: 3, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Dobar dan', pron: 'ਦੋਬਰ ਦਾਨ (Dobar dan)', pa: 'ਸ਼ੁਭ ਦਿਨ / ਨਮਸਤੇ', ro: 'Shubh Din (Good day)' },
+      { id: 4, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Dobra večer', pron: 'ਦੋਬਰਾ ਵੇਚੇਰ (Dobra vecher)', pa: 'ਸ਼ੁਭ ਸ਼ਾਮ', ro: 'Shubh Shaam (Good evening)' },
+      { id: 5, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Laku noć', pron: 'ਲਾਕੂ ਨੋਚ (Laku noch)', pa: 'ਸ਼ੁਭ ਰਾਤਰੀ', ro: 'Shubh Raatri (Good night)' },
+      { id: 6, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Hvala lijepa', pron: 'ਹਵਾਲਾ ਲੀਏਪਾ (Hvala liyepa)', pa: 'ਬਹੁਤ ਧੰਨਵਾਦ', ro: 'Bahut Dhannvaad (Thank you very much)' },
+      { id: 7, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Molim', pron: 'ਮੋਲੀਮ (Molim)', pa: 'ਕਿਰਪਾ ਕਰਕੇ / ਜੀ ਆਇਆਂ ਨੂੰ', ro: 'Kirpa karke (Please / Welcome)' },
+      { id: 8, type: 'word', level: 'A1', cat: 'Greetings', hr: 'Da / Ne', pron: 'ਦਾ / ਨੇ (Da / Ne)', pa: 'ਹਾਂ / ਨਹੀਂ', ro: 'Haan / Nahi (Yes / No)' },
+      { id: 9, type: 'word', level: 'A1', cat: 'Daily', hr: 'Voda / Kruh / Mlijeko', pron: 'ਵੋਦਾ / ਕਰੂਹ / ਮਲੀਏਕੋ (Voda / Kruh / Mliyeko)', pa: 'ਪਾਣੀ / ਰੋਟੀ (ਬ੍ਰੈੱਡ) / ਦੁੱਧ', ro: 'Paani / Bread / Dudh' },
+      { id: 10, type: 'word', level: 'A1', cat: 'Daily', hr: 'Jaja / Piletina / Riba', pron: 'ਯਾਯਾ / ਪੀਲੇਤੀਨਾ / ਰੀਬਾ (Yaya / Piletina / Riba)', pa: 'ਆਂਡੇ / ਚਿਕਨ / ਮੱਛੀ', ro: 'Aande / Chicken / Machhi' },
+      { id: 11, type: 'sentence', level: 'A1', cat: 'Greetings', hr: 'Ja sam iz Indije, iz Punjaba.', pron: 'ਯਾ ਸਾਮ ਇਜ਼ ਇੰਦੀਏ, ਇਜ਼ ਪੰਜਾਬਾ', pa: 'ਮੈਂ ਭਾਰਤ (ਪੰਜਾਬ) ਤੋਂ ਹਾਂ।', ro: 'Main Bharat (Punjab) ton haan.' },
+      { id: 12, type: 'sentence', level: 'A1', cat: 'Greetings', hr: 'Kako se zoveš? Ja se zovem...', pron: 'ਕਾਕੋ ਸੇ ਜ਼ੋਵੇਸ਼? ਯਾ ਸੇ ਜ਼ੋਵੇਮ...', pa: 'ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ? ਮੇਰਾ ਨਾਮ ... ਹੈ।', ro: 'Tuhada naam ki hai? Mera naam ... hai.' },
+      { id: 13, type: 'sentence', level: 'A1', cat: 'Greetings', hr: 'Govorite li engleski?', pron: 'ਗੋਵੋਰੀਤੇ ਲੀ ਏਂਗਲੇਸਕੀ?', pa: 'ਕੀ ਤੁਸੀਂ ਅੰਗਰੇਜ਼ੀ ਬੋਲਦੇ ਹੋ?', ro: 'Ki tusi English bolde ho?' },
+
+      { id: 14, type: 'word', level: 'A2', cat: 'Daily', hr: 'Trgovina / Pekara', pron: 'ਤਰਗੋਵੀਨਾ / ਪੇਕਾਰਾ (Trgovina / Pekara)', pa: 'ਦੁਕਾਨ / ਬੇਕਰੀ', ro: 'Dukaan / Bakery' },
+      { id: 15, type: 'word', level: 'A2', cat: 'Daily', hr: 'Kolodvor / Autobus', pron: 'ਕੋਲੋਦਵੋਰ / ਆਉਤੋਬੁਸ (Kolodvor / Autobus)', pa: 'ਸਟੇਸ਼ਨ / ਬੱਸ', ro: 'Station / Bus' },
+      { id: 16, type: 'word', level: 'A2', cat: 'Daily', hr: 'Stanarina / Račun', pron: 'ਸਤਾਨਾਰੀਨਾ / ਰਾਚੂਨ (Stanarina / Rachun)', pa: 'ਕਮਰੇ ਦਾ ਕਿਰਾਇਆ / ਬਿੱਲ', ro: 'Kamre da kiraya / Bill' },
+      { id: 17, type: 'word', level: 'A2', cat: 'Daily', hr: 'Danas / Sutra / Jučer', pron: 'ਦਾਨਾਸ / ਸੂਤਰਾ / ਯੂਚੇਰ (Danas / Sutra / Yucher)', pa: 'ਅੱਜ / ਕੱਲ੍ਹ (ਆਉਣ ਵਾਲਾ) / ਕੱਲ੍ਹ (ਬੀਤਿਆ)', ro: 'Ajj / Kal (Tomorrow) / Kal (Yesterday)' },
+      { id: 18, type: 'word', level: 'A2', cat: 'Daily', hr: 'Lijevo / Desno / Ravno', pron: 'ਲੀਏਵੋ / ਦੇਸਨੋ / ਰਾਵਨੋ (Liyevo / Desno / Ravno)', pa: 'ਖੱਬੇ / ਸੱਜੇ / ਸਿੱਧਾ', ro: 'Khabbe / Sajje / Sidha' },
+      { id: 19, type: 'sentence', level: 'A2', cat: 'Daily', hr: 'Koliko ovo košta?', pron: 'ਕੋਲੀਕੋ ਓਵੋ ਕੋਸ਼ਤਾ?', pa: 'ਇਸ ਦੀ ਕੀਮਤ ਕਿੰਨੀ ਹੈ?', ro: 'Is di keemat kinni hai?' },
+      { id: 20, type: 'sentence', level: 'A2', cat: 'Daily', hr: 'Gdje je najbliža trgovina ili bankomat?', pron: 'ਗਦੀਏ ਯੇ ਨਾਇਬਲੀਝਾ ਤਰਗੋਵੀਨਾ ਇਲੀ ਬਾਂਕੋਮਾਤ?', pa: 'ਸਭ ਤੋਂ ਨੇੜੇ ਦੁਕਾਨ ਜਾਂ ATM ਕਿੱਥੇ ਹੈ?', ro: 'Sabh ton nede dukaan jaan ATM kitthe hai?' },
+      { id: 21, type: 'sentence', level: 'A2', cat: 'Daily', hr: 'Trebam kupiti mjesečnu kartu za autobus.', pron: 'ਤਰੇਬਾਮ ਕੁਪੀਤੀ ਮੀਏਸੇਚਨੂ ਕਾਰਤੂ ਜ਼ਾ ਆਉਤੋਬੁਸ', pa: 'ਮੈਂ ਬੱਸ ਦਾ ਮਹੀਨਾਵਾਰ ਪਾਸ ਖਰੀਦਣਾ ਹੈ।', ro: 'Main bus da mahinavaar pass kharidna hai.' },
+
+      { id: 22, type: 'word', level: 'B1', cat: 'Work', hr: 'Zavarivač / Zavarivanje', pron: 'ਜ਼ਾਵਾਰੀਵਾਚ / ਜ਼ਾਵਾਰੀਵਾਨੀਏ (Zavarivach / Zavarivanye)', pa: 'ਵੈਲਡਰ / ਵੈਲਡਿੰਗ ਦਾ ਕੰਮ', ro: 'Welder / Welding da kamm' },
+      { id: 23, type: 'word', level: 'B1', cat: 'Work', hr: 'Aparat za zavarivanje (MIG / MAG)', pron: 'ਅਪਾਰਾਤ ਜ਼ਾ ਜ਼ਾਵਾਰੀਵਾਨੀਏ', pa: 'ਵੈਲਡਿੰਗ ਮਸ਼ੀਨ (MIG / MAG)', ro: 'Welding Machine' },
+      { id: 24, type: 'word', level: 'B1', cat: 'Work', hr: 'Žica s praškom (Flux-core)', pron: 'ਝੀਤਸਾ ਸ ਪਰਾਸ਼ਕੋਮ (Zhitsa s prashkom)', pa: 'ਫਲਕਸ-ਕੋਰ ਵਾਇਰ (ਤਾਰ)', ro: 'Flux-core wire (Taar)' },
+      { id: 25, type: 'word', level: 'B1', cat: 'Work', hr: 'Čelik / Željezo / Lim', pron: 'ਚੇਲਿਕ / ਝੇਲੀਏਜ਼ੋ / ਲੀਮ (Chelik / Zhelyezo / Lim)', pa: 'ਸਟੀਲ / ਲੋਹਾ / ਲੋਹੇ ਦੀ ਚਾਦਰ (Sheet)', ro: 'Steel / Loha / Metal Sheet' },
+      { id: 26, type: 'word', level: 'B1', cat: 'Work', hr: 'Zaštitna oprema (Maska, Rukavice, Cipele)', pron: 'ਜ਼ਾਸ਼ਤੀਤਨਾ ਓਪਰੇਮਾ (ਮਾਸਕਾ, ਰੁਕਾਵੀਤਸੇ, ਤਸੀਪੇਲੇ)', pa: 'ਸੇਫਟੀ ਸਮਾਨ (ਹੈਲਮੇਟ/ਮਾਸਕ, ਦਸਤਾਨੇ, ਸੇਫਟੀ ਬੂਟ)', ro: 'Safety samaan (Mask, Gloves, Safety Shoes)' },
+      { id: 27, type: 'word', level: 'B1', cat: 'Work', hr: 'Brusilica / Nacrt / Metar', pron: 'ਬਰੂਸੀਲੀਤਸਾ / ਨਾਤਸਰ
